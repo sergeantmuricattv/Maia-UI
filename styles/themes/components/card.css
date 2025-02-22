@@ -1,0 +1,7 @@
+.card {
+    @apply maia-bg-white dark:maia-bg-gray-800 maia-text-gray-900 dark:maia-text-gray-100 maia-rounded-lg maia-shadow maia-p-6;
+}
+
+.card-title {
+    @apply maia-text-lg maia-font-bold maia-mb-4;
+}

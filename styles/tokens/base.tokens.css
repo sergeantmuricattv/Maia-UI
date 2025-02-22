@@ -1,0 +1,2035 @@
+:root {
+    --maia-ui-color-gray-50: hsl(0, 0%, 99.0%);
+    --maia-ui-color-gray-100: hsl(0, 0%, 97.5%);
+    --maia-ui-color-gray-200: hsl(0, 0%, 94.6%);
+    --maia-ui-color-gray-300: hsl(0, 0%, 92.0%);
+    --maia-ui-color-gray-400: hsl(0, 0%, 89.5%);
+    --maia-ui-color-gray-500: hsl(0, 0%, 86.8%);
+    --maia-ui-color-gray-600: hsl(0, 0%, 83.0%);
+    --maia-ui-color-gray-700: hsl(0, 0%, 73.2%);
+    --maia-ui-color-gray-800: hsl(0, 0%, 55.2%);
+    --maia-ui-color-gray-900: hsl(0, 0%, 50.3%);
+    --maia-ui-color-gray-950: hsl(0, 0%, 39.3%);
+    --maia-ui-color-gray-1000: hsl(0, 0%, 12.5%);
+    --maia-ui-color-mauve-50: hsl(300, 26.0%, 99.0%);
+    --maia-ui-color-mauve-100: hsl(270, 20.0%, 98.0%);
+    --maia-ui-color-mauve-200: hsl(267, 13.8%, 95.3%);
+    --maia-ui-color-mauve-300: hsl(265, 12.2%, 92.7%);
+    --maia-ui-color-mauve-400: hsl(263, 11.6%, 90.3%);
+    --maia-ui-color-mauve-500: hsl(261, 11.1%, 87.7%);
+    --maia-ui-color-mauve-600: hsl(257, 10.8%, 84.3%);
+    --maia-ui-color-mauve-700: hsl(249, 10.4%, 75.5%);
+    --maia-ui-color-mauve-800: hsl(252, 6.0%, 57.3%);
+    --maia-ui-color-mauve-900: hsl(250, 5.0%, 52.3%);
+    --maia-ui-color-mauve-950: hsl(252, 5.0%, 40.7%);
+    --maia-ui-color-mauve-1000: hsl(260, 10.0%, 13.5%);
+    --maia-ui-color-slate-50: hsl(240, 22.0%, 99.0%);
+    --maia-ui-color-slate-100: hsl(240, 20.0%, 98.0%);
+    --maia-ui-color-slate-200: hsl(239, 13.4%, 95.4%);
+    --maia-ui-color-slate-300: hsl(238, 11.8%, 92.9%);
+    --maia-ui-color-slate-400: hsl(237, 11.1%, 90.5%);
+    --maia-ui-color-slate-500: hsl(236, 10.6%, 87.9%);
+    --maia-ui-color-slate-600: hsl(234, 10.4%, 84.4%);
+    --maia-ui-color-slate-700: hsl(231, 10.2%, 75.1%);
+    --maia-ui-color-slate-800: hsl(230, 6.0%, 57.0%);
+    --maia-ui-color-slate-900: hsl(227, 5.2%, 51.8%);
+    --maia-ui-color-slate-950: hsl(227, 5.0%, 40.2%);
+    --maia-ui-color-slate-1000: hsl(210, 12.0%, 12.5%);
+    --maia-ui-color-sage-50: hsl(155, 30.0%, 98.8%);
+    --maia-ui-color-sage-100: hsl(150, 14.3%, 97.3%);
+    --maia-ui-color-sage-200: hsl(150, 8.0%, 94.5%);
+    --maia-ui-color-sage-300: hsl(150, 6.0%, 92.0%);
+    --maia-ui-color-sage-400: hsl(150, 4.9%, 89.5%);
+    --maia-ui-color-sage-500: hsl(150, 4.3%, 86.7%);
+    --maia-ui-color-sage-600: hsl(150, 3.7%, 82.8%);
+    --maia-ui-color-sage-700: hsl(150, 2.9%, 72.9%);
+    --maia-ui-color-sage-800: hsl(155, 3.5%, 54.2%);
+    --maia-ui-color-sage-900: hsl(158, 2.9%, 49.3%);
+    --maia-ui-color-sage-950: hsl(155, 3.0%, 38.5%);
+    --maia-ui-color-sage-1000: hsl(155, 12.0%, 11.5%);
+    --maia-ui-color-olive-50: hsl(110, 20.0%, 99.0%);
+    --maia-ui-color-olive-100: hsl(120, 16.7%, 97.6%);
+    --maia-ui-color-olive-200: hsl(118, 8.4%, 94.8%);
+    --maia-ui-color-olive-300: hsl(116, 6.0%, 92.1%);
+    --maia-ui-color-olive-400: hsl(115, 4.9%, 89.4%);
+    --maia-ui-color-olive-500: hsl(113, 4.2%, 86.5%);
+    --maia-ui-color-olive-600: hsl(111, 3.6%, 82.6%);
+    --maia-ui-color-olive-700: hsl(105, 2.9%, 72.9%);
+    --maia-ui-color-olive-800: hsl(110, 3.0%, 54.5%);
+    --maia-ui-color-olive-900: hsl(105, 2.7%, 49.4%);
+    --maia-ui-color-olive-950: hsl(110, 3.0%, 38.5%);
+    --maia-ui-color-olive-1000: hsl(110, 8.0%, 12.0%);
+    --maia-ui-color-sand-50: hsl(50, 20.0%, 99.0%);
+    --maia-ui-color-sand-100: hsl(60, 7.7%, 97.5%);
+    --maia-ui-color-sand-200: hsl(59, 5.8%, 94.5%);
+    --maia-ui-color-sand-300: hsl(58, 5.3%, 91.8%);
+    --maia-ui-color-sand-400: hsl(57, 5.1%, 89.0%);
+    --maia-ui-color-sand-500: hsl(56, 5.0%, 86.0%);
+    --maia-ui-color-sand-600: hsl(54, 4.9%, 81.8%);
+    --maia-ui-color-sand-700: hsl(51, 5.0%, 72.4%);
+    --maia-ui-color-sand-800: hsl(60, 3.0%, 53.9%);
+    --maia-ui-color-sand-900: hsl(60, 2.6%, 49.0%);
+    --maia-ui-color-sand-950: hsl(50, 2.5%, 38.0%);
+    --maia-ui-color-sand-1000: hsl(50, 8.0%, 12.0%);
+    --maia-ui-color-tomato-50: hsl(10, 100%, 99.4%);
+    --maia-ui-color-tomato-100: hsl(8, 100%, 98.4%);
+    --maia-ui-color-tomato-200: hsl(8, 100%, 96.6%);
+    --maia-ui-color-tomato-300: hsl(8, 100%, 94.3%);
+    --maia-ui-color-tomato-400: hsl(8, 92.8%, 91.0%);
+    --maia-ui-color-tomato-500: hsl(9, 84.7%, 86.3%);
+    --maia-ui-color-tomato-600: hsl(10, 77.3%, 79.5%);
+    --maia-ui-color-tomato-700: hsl(10, 71.6%, 71.0%);
+    --maia-ui-color-tomato-800: hsl(10, 78.0%, 54.0%);
+    --maia-ui-color-tomato-900: hsl(10, 71.4%, 49.4%);
+    --maia-ui-color-tomato-950: hsl(10, 82.0%, 42.0%);
+    --maia-ui-color-tomato-1000: hsl(8, 50.0%, 24.0%);
+    --maia-ui-color-red-50: hsl(359, 100%, 99.4%);
+    --maia-ui-color-red-100: hsl(0, 100%, 98.4%);
+    --maia-ui-color-red-200: hsl(360, 100%, 96.8%);
+    --maia-ui-color-red-300: hsl(360, 97.9%, 94.8%);
+    --maia-ui-color-red-400: hsl(360, 90.2%, 91.9%);
+    --maia-ui-color-red-500: hsl(360, 81.7%, 87.8%);
+    --maia-ui-color-red-600: hsl(359, 74.2%, 81.7%);
+    --maia-ui-color-red-700: hsl(359, 69.5%, 74.3%);
+    --maia-ui-color-red-800: hsl(358, 75.0%, 59.0%);
+    --maia-ui-color-red-900: hsl(358, 67.4%, 54.6%);
+    --maia-ui-color-red-950: hsl(358, 65.0%, 47.0%);
+    --maia-ui-color-red-1000: hsl(350, 63.0%, 24.0%);
+    --maia-ui-color-ruby-50: hsl(348, 100%, 99.5%);
+    --maia-ui-color-ruby-100: hsl(345, 100%, 98.4%);
+    --maia-ui-color-ruby-200: hsl(345, 89.9%, 96.7%);
+    --maia-ui-color-ruby-300: hsl(346, 82.6%, 94.4%);
+    --maia-ui-color-ruby-400: hsl(346, 75.8%, 91.4%);
+    --maia-ui-color-ruby-500: hsl(347, 69.3%, 87.1%);
+    --maia-ui-color-ruby-600: hsl(348, 64.3%, 80.9%);
+    --maia-ui-color-ruby-700: hsl(348, 61.5%, 73.5%);
+    --maia-ui-color-ruby-800: hsl(348, 75.0%, 58.5%);
+    --maia-ui-color-ruby-900: hsl(347, 68.6%, 54.1%);
+    --maia-ui-color-ruby-950: hsl(345, 70.0%, 46.5%);
+    --maia-ui-color-ruby-1000: hsl(344, 63.0%, 24.0%);
+    --maia-ui-color-crimson-50: hsl(332, 100%, 99.4%);
+    --maia-ui-color-crimson-100: hsl(330, 100%, 98.4%);
+    --maia-ui-color-crimson-200: hsl(331, 85.6%, 96.6%);
+    --maia-ui-color-crimson-300: hsl(331, 78.1%, 94.2%);
+    --maia-ui-color-crimson-400: hsl(332, 72.1%, 91.1%);
+    --maia-ui-color-crimson-500: hsl(333, 67.0%, 86.7%);
+    --maia-ui-color-crimson-600: hsl(335, 63.5%, 80.4%);
+    --maia-ui-color-crimson-700: hsl(336, 62.3%, 72.9%);
+    --maia-ui-color-crimson-800: hsl(336, 80.0%, 57.8%);
+    --maia-ui-color-crimson-900: hsl(336, 71.3%, 52.8%);
+    --maia-ui-color-crimson-950: hsl(336, 75.0%, 45.5%);
+    --maia-ui-color-crimson-1000: hsl(332, 63.0%, 23.5%);
+    --maia-ui-color-pink-50: hsl(322, 100%, 99.4%);
+    --maia-ui-color-pink-100: hsl(323, 100%, 98.4%);
+    --maia-ui-color-pink-200: hsl(323, 86.3%, 96.5%);
+    --maia-ui-color-pink-300: hsl(323, 78.7%, 94.2%);
+    --maia-ui-color-pink-400: hsl(323, 72.2%, 91.1%);
+    --maia-ui-color-pink-500: hsl(323, 66.3%, 86.6%);
+    --maia-ui-color-pink-600: hsl(323, 62.0%, 80.1%);
+    --maia-ui-color-pink-700: hsl(323, 60.3%, 72.4%);
+    --maia-ui-color-pink-800: hsl(322, 65.0%, 54.5%);
+    --maia-ui-color-pink-900: hsl(322, 62.0%, 49.6%);
+    --maia-ui-color-pink-950: hsl(322, 75.0%, 44.0%);
+    --maia-ui-color-pink-1000: hsl(320, 70.0%, 23.2%);
+    --maia-ui-color-plum-50: hsl(292, 90.0%, 99.4%);
+    --maia-ui-color-plum-100: hsl(300, 100%, 98.6%);
+    --maia-ui-color-plum-200: hsl(299, 71.2%, 96.4%);
+    --maia-ui-color-plum-300: hsl(299, 62.0%, 93.8%);
+    --maia-ui-color-plum-400: hsl(298, 56.1%, 90.5%);
+    --maia-ui-color-plum-500: hsl(296, 51.3%, 85.8%);
+    --maia-ui-color-plum-600: hsl(295, 48.2%, 78.9%);
+    --maia-ui-color-plum-700: hsl(292, 47.7%, 70.8%);
+    --maia-ui-color-plum-800: hsl(292, 45.0%, 51.0%);
+    --maia-ui-color-plum-900: hsl(292, 50.2%, 46.9%);
+    --maia-ui-color-plum-950: hsl(292, 60.0%, 42.5%);
+    --maia-ui-color-plum-1000: hsl(291, 57.0%, 23.2%);
+    --maia-ui-color-purple-50: hsl(280, 65.0%, 99.4%);
+    --maia-ui-color-purple-100: hsl(276, 100%, 99.0%);
+    --maia-ui-color-purple-200: hsl(276, 83.1%, 97.0%);
+    --maia-ui-color-purple-300: hsl(275, 76.4%, 94.7%);
+    --maia-ui-color-purple-400: hsl(275, 70.8%, 91.8%);
+    --maia-ui-color-purple-500: hsl(274, 65.4%, 87.8%);
+    --maia-ui-color-purple-600: hsl(273, 61.0%, 81.7%);
+    --maia-ui-color-purple-700: hsl(272, 60.0%, 73.5%);
+    --maia-ui-color-purple-800: hsl(272, 51.0%, 54.0%);
+    --maia-ui-color-purple-900: hsl(272, 46.8%, 50.3%);
+    --maia-ui-color-purple-950: hsl(272, 50.0%, 45.8%);
+    --maia-ui-color-purple-1000: hsl(270, 50.0%, 25.0%);
+    --maia-ui-color-violet-50: #fdfcfe;
+    --maia-ui-color-violet-100: #faf8ff;
+    --maia-ui-color-violet-200: #f4f0fe;
+    --maia-ui-color-violet-300: #ebe4ff;
+    --maia-ui-color-violet-400: #e1d9ff;
+    --maia-ui-color-violet-500: #d4cafe;
+    --maia-ui-color-violet-600: #c2b5f5;
+    --maia-ui-color-violet-700: #aa99ec;
+    --maia-ui-color-violet-800: #6e56cf;
+    --maia-ui-color-violet-900: #654dc4;
+    --maia-ui-color-violet-950: #6550b9;
+    --maia-ui-color-violet-1000: #2f265f;
+    --maia-ui-color-iris-50: #fdfdff;
+    --maia-ui-color-iris-100: #f8f8ff;
+    --maia-ui-color-iris-200: #f0f1fe;
+    --maia-ui-color-iris-300: #e6e7ff;
+    --maia-ui-color-iris-400: #dadcff;
+    --maia-ui-color-iris-500: #cbcdff;
+    --maia-ui-color-iris-600: #b8baf8;
+    --maia-ui-color-iris-700: #9b9ef0;
+    --maia-ui-color-iris-800: #5b5bd6;
+    --maia-ui-color-iris-900: #5151cd;
+    --maia-ui-color-iris-950: #5753c6;
+    --maia-ui-color-iris-1000: #272962;
+    --maia-ui-color-indigo-50: #fdfdfe;
+    --maia-ui-color-indigo-100: #f7f9ff;
+    --maia-ui-color-indigo-200: #edf2fe;
+    --maia-ui-color-indigo-300: #e1e9ff;
+    --maia-ui-color-indigo-400: #d2deff;
+    --maia-ui-color-indigo-500: #c1d0ff;
+    --maia-ui-color-indigo-600: #abbdf9;
+    --maia-ui-color-indigo-700: #8da4ef;
+    --maia-ui-color-indigo-800: #3e63dd;
+    --maia-ui-color-indigo-900: #3358d4;
+    --maia-ui-color-indigo-950: #3a5bc7;
+    --maia-ui-color-indigo-1000: #1f2d5c;
+    --maia-ui-color-blue-50: #fbfdff;
+    --maia-ui-color-blue-100: #f4faff;
+    --maia-ui-color-blue-200: #e6f4fe;
+    --maia-ui-color-blue-300: #d5efff;
+    --maia-ui-color-blue-400: #c2e5ff;
+    --maia-ui-color-blue-500: #acd8fc;
+    --maia-ui-color-blue-600: #8ec8f6;
+    --maia-ui-color-blue-700: #5eb1ef;
+    --maia-ui-color-blue-800: #0090ff;
+    --maia-ui-color-blue-900: #0588f0;
+    --maia-ui-color-blue-950: #0d74ce;
+    --maia-ui-color-blue-1000: #113264;
+    --maia-ui-color-cyan-50: #fafdfe;
+    --maia-ui-color-cyan-100: #f2fafb;
+    --maia-ui-color-cyan-200: #def7f9;
+    --maia-ui-color-cyan-300: #caf1f6;
+    --maia-ui-color-cyan-400: #b5e9f0;
+    --maia-ui-color-cyan-500: #9ddde7;
+    --maia-ui-color-cyan-600: #7dcedc;
+    --maia-ui-color-cyan-700: #3db9cf;
+    --maia-ui-color-cyan-800: #00a2c7;
+    --maia-ui-color-cyan-900: #0797b9;
+    --maia-ui-color-cyan-950: #107d98;
+    --maia-ui-color-cyan-1000: #0d3c48;
+    --maia-ui-color-teal-50: #fbfefd;
+    --maia-ui-color-teal-100: #f4fbf7;
+    --maia-ui-color-teal-200: #e6f7ed;
+    --maia-ui-color-teal-300: #d6f1e3;
+    --maia-ui-color-teal-400: #c3e9d7;
+    --maia-ui-color-teal-500: #acdec8;
+    --maia-ui-color-teal-600: #8bceb6;
+    --maia-ui-color-teal-700: #56ba9f;
+    --maia-ui-color-teal-800: #29a383;
+    --maia-ui-color-teal-900: #26997b;
+    --maia-ui-color-teal-950: #208368;
+    --maia-ui-color-teal-1000: #1d3b31;
+    --maia-ui-color-jade-50: #fbfefd;
+    --maia-ui-color-jade-100: #f4fbf7;
+    --maia-ui-color-jade-200: #e6f7ed;
+    --maia-ui-color-jade-300: #d6f1e3;
+    --maia-ui-color-jade-400: #c3e9d7;
+    --maia-ui-color-jade-500: #acdec8;
+    --maia-ui-color-jade-600: #8bceb6;
+    --maia-ui-color-jade-700: #56ba9f;
+    --maia-ui-color-jade-800: #29a383;
+    --maia-ui-color-jade-900: #26997b;
+    --maia-ui-color-jade-950: #208368;
+    --maia-ui-color-jade-1000: #1d3b31;
+    --maia-ui-color-green-50: #fbfefc;
+    --maia-ui-color-green-100: #f4fbf6;
+    --maia-ui-color-green-200: #e6f6eb;
+    --maia-ui-color-green-300: #d6f1df;
+    --maia-ui-color-green-400: #c4e8d1;
+    --maia-ui-color-green-500: #adddc0;
+    --maia-ui-color-green-600: #8eceaa;
+    --maia-ui-color-green-700: #5bb98b;
+    --maia-ui-color-green-800: #30a46c;
+    --maia-ui-color-green-900: #2b9a66;
+    --maia-ui-color-green-950: #218358;
+    --maia-ui-color-green-1000: #193b2d;
+    --maia-ui-color-grass-50: #fbfefb;
+    --maia-ui-color-grass-100: #f5fbf5;
+    --maia-ui-color-grass-200: #e9f6e9;
+    --maia-ui-color-grass-300: #daf1db;
+    --maia-ui-color-grass-400: #c9e8ca;
+    --maia-ui-color-grass-500: #b2ddb5;
+    --maia-ui-color-grass-600: #94ce9a;
+    --maia-ui-color-grass-700: #65ba74;
+    --maia-ui-color-grass-800: #46a758;
+    --maia-ui-color-grass-900: #3e9b4f;
+    --maia-ui-color-grass-950: #2a7e3b;
+    --maia-ui-color-grass-1000: #203c25;
+    --maia-ui-color-brown-50: #fefdfc;
+    --maia-ui-color-brown-100: #fcf9f6;
+    --maia-ui-color-brown-200: #f6eee7;
+    --maia-ui-color-brown-300: #f0e4d9;
+    --maia-ui-color-brown-400: #ebdaca;
+    --maia-ui-color-brown-500: #e4cdb7;
+    --maia-ui-color-brown-600: #dcbc9f;
+    --maia-ui-color-brown-700: #cea37e;
+    --maia-ui-color-brown-800: #ad7f58;
+    --maia-ui-color-brown-900: #a07553;
+    --maia-ui-color-brown-950: #815e46;
+    --maia-ui-color-brown-1000: #3e332e;
+    --maia-ui-color-bronze-50: #fdfcfc;
+    --maia-ui-color-bronze-100: #fcf9f6;
+    --maia-ui-color-bronze-200: #f6eee7;
+    --maia-ui-color-bronze-300: #f0e4d9;
+    --maia-ui-color-bronze-400: #ebdaca;
+    --maia-ui-color-bronze-500: #e4cdb7;
+    --maia-ui-color-bronze-600: #dcbc9f;
+    --maia-ui-color-bronze-700: #cea37e;
+    --maia-ui-color-bronze-800: #ad7f58;
+    --maia-ui-color-bronze-900: #a07553;
+    --maia-ui-color-bronze-950: #815e46;
+    --maia-ui-color-bronze-1000: #3e332e;
+    --maia-ui-color-gold-50: #fdfdfc;
+    --maia-ui-color-gold-100: #faf9f2;
+    --maia-ui-color-gold-200: #f2f0e7;
+    --maia-ui-color-gold-300: #eae6db;
+    --maia-ui-color-gold-400: #e1dccf;
+    --maia-ui-color-gold-500: #d8d0bf;
+    --maia-ui-color-gold-600: #cbc0aa;
+    --maia-ui-color-gold-700: #b9a88d;
+    --maia-ui-color-gold-800: #978365;
+    --maia-ui-color-gold-900: #8c7a5e;
+    --maia-ui-color-gold-950: #71624b;
+    --maia-ui-color-gold-1000: #3b352b;
+    --maia-ui-color-sky-50: #f9feff;
+    --maia-ui-color-sky-100: #f1fafd;
+    --maia-ui-color-sky-200: #e1f6fd;
+    --maia-ui-color-sky-300: #d1f0fa;
+    --maia-ui-color-sky-400: #bee7f5;
+    --maia-ui-color-sky-500: #a9daed;
+    --maia-ui-color-sky-600: #8dcae3;
+    --maia-ui-color-sky-700: #60b3d7;
+    --maia-ui-color-sky-800: #7ce2fe;
+    --maia-ui-color-sky-900: #74daf8;
+    --maia-ui-color-sky-950: #00749e;
+    --maia-ui-color-sky-1000: #1d3e56;
+    --maia-ui-color-mint-50: #f9fefd;
+    --maia-ui-color-mint-100: #f2fbf9;
+    --maia-ui-color-mint-200: #ddf9f2;
+    --maia-ui-color-mint-300: #c8f4e9;
+    --maia-ui-color-mint-400: #b3ecde;
+    --maia-ui-color-mint-500: #9ce0d0;
+    --maia-ui-color-mint-600: #7ecfbd;
+    --maia-ui-color-mint-700: #4cbba5;
+    --maia-ui-color-mint-800: #86ead4;
+    --maia-ui-color-mint-900: #7de0cb;
+    --maia-ui-color-mint-950: #027864;
+    --maia-ui-color-mint-1000: #16433c;
+    --maia-ui-color-lime-50: #fcfdfa;
+    --maia-ui-color-lime-100: #f8faf3;
+    --maia-ui-color-lime-200: #eef6d6;
+    --maia-ui-color-lime-300: #e2f0bd;
+    --maia-ui-color-lime-400: #d3e7a6;
+    --maia-ui-color-lime-500: #c2da91;
+    --maia-ui-color-lime-600: #abc978;
+    --maia-ui-color-lime-700: #8db654;
+    --maia-ui-color-lime-800: #bdee63;
+    --maia-ui-color-lime-900: #b0e64c;
+    --maia-ui-color-lime-950: #5c7c2f;
+    --maia-ui-color-lime-1000: #37401c;
+    --maia-ui-color-yellow-50: #fdfdf9;
+    --maia-ui-color-yellow-100: #fefce9;
+    --maia-ui-color-yellow-200: #fffab8;
+    --maia-ui-color-yellow-300: #fff394;
+    --maia-ui-color-yellow-400: #ffe770;
+    --maia-ui-color-yellow-500: #f3d768;
+    --maia-ui-color-yellow-600: #e4c767;
+    --maia-ui-color-yellow-700: #d5ae39;
+    --maia-ui-color-yellow-800: #ffe629;
+    --maia-ui-color-yellow-900: #ffdc00;
+    --maia-ui-color-yellow-950: #9e6c00;
+    --maia-ui-color-yellow-1000: #473b1f;
+    --maia-ui-color-amber-50: #fefdfb;
+    --maia-ui-color-amber-100: #fefbe9;
+    --maia-ui-color-amber-200: #fff7c2;
+    --maia-ui-color-amber-300: #ffee9c;
+    --maia-ui-color-amber-400: #fbe577;
+    --maia-ui-color-amber-500: #f3d673;
+    --maia-ui-color-amber-600: #e9c162;
+    --maia-ui-color-amber-700: #e2a336;
+    --maia-ui-color-amber-800: #ffc53d;
+    --maia-ui-color-amber-900: #ffba18;
+    --maia-ui-color-amber-950: #ab6400;
+    --maia-ui-color-amber-1000: #4f3422;
+    --maia-ui-color-orange-50: #fefcfb;
+    --maia-ui-color-orange-100: #fff7ed;
+    --maia-ui-color-orange-200: #ffefd6;
+    --maia-ui-color-orange-300: #ffdfb5;
+    --maia-ui-color-orange-400: #ffd19a;
+    --maia-ui-color-orange-500: #ffc182;
+    --maia-ui-color-orange-600: #f5ae73;
+    --maia-ui-color-orange-700: #ec9455;
+    --maia-ui-color-orange-800: #f76b15;
+    --maia-ui-color-orange-900: #ef5f00;
+    --maia-ui-color-orange-950: #cc4e00;
+    --maia-ui-color-orange-1000: #582d1d;
+    /* Maia UI New Color Sets – 19 Sets */
+
+    /* Aegean – inspired by the deep, clear Aegean Sea */
+    --maia-ui-color-aegean-50:  #e3f9ff;
+    --maia-ui-color-aegean-100: #c2efff;
+    --maia-ui-color-aegean-200: #9fe5ff;
+    --maia-ui-color-aegean-300: #7ceaff;
+    --maia-ui-color-aegean-400: #59e0ff;
+    --maia-ui-color-aegean-500: #36d6ff;
+    --maia-ui-color-aegean-600: #29bfff;
+    --maia-ui-color-aegean-700: #1da8ff;
+    --maia-ui-color-aegean-800: #128fff;
+    --maia-ui-color-aegean-900: #0a78ff;
+    --maia-ui-color-aegean-950: #0864e0;
+    --maia-ui-color-aegean-1000: #0340b0;
+
+    /* Marble – evoking cool, timeless white marble */
+    --maia-ui-color-marble-50:  #fffefe;
+    --maia-ui-color-marble-100: #fffdfd;
+    --maia-ui-color-marble-200: #fffcfc;
+    --maia-ui-color-marble-300: #fffaf9;
+    --maia-ui-color-marble-400: #fff7f5;
+    --maia-ui-color-marble-500: #fff4f2;
+    --maia-ui-color-marble-600: #fff1ee;
+    --maia-ui-color-marble-700: #ffedea;
+    --maia-ui-color-marble-800: #ffe9e6;
+    --maia-ui-color-marble-900: #ffe5e2;
+    --maia-ui-color-marble-950: #ffe0dd;
+    --maia-ui-color-marble-1000: #ffdbd8;
+
+    /* Terracotta – warm, earthy clay tones */
+    --maia-ui-color-terracotta-50:  #fbeae3;
+    --maia-ui-color-terracotta-100: #f7d3c6;
+    --maia-ui-color-terracotta-200: #f2bca8;
+    --maia-ui-color-terracotta-300: #eea58c;
+    --maia-ui-color-terracotta-400: #ea8f6e;
+    --maia-ui-color-terracotta-500: #e67a50;
+    --maia-ui-color-terracotta-600: #cc6f45;
+    --maia-ui-color-terracotta-700: #b3643a;
+    --maia-ui-color-terracotta-800: #994a30;
+    --maia-ui-color-terracotta-900: #803f27;
+    --maia-ui-color-terracotta-950: #69351f;
+    --maia-ui-color-terracotta-1000: #522a18;
+
+    /* Byzantine – rich, deep purples reminiscent of imperial finery */
+    --maia-ui-color-byzantine-50:  #f3e5f7;
+    --maia-ui-color-byzantine-100: #e8c1ee;
+    --maia-ui-color-byzantine-200: #dc9de5;
+    --maia-ui-color-byzantine-300: #d079db;
+    --maia-ui-color-byzantine-400: #c555d2;
+    --maia-ui-color-byzantine-500: #ba31c9;
+    --maia-ui-color-byzantine-600: #a329b0;
+    --maia-ui-color-byzantine-700: #8c2188;
+    --maia-ui-color-byzantine-800: #761a60;
+    --maia-ui-color-byzantine-900: #5f1340;
+    --maia-ui-color-byzantine-950: #4a0c30;
+    --maia-ui-color-byzantine-1000: #350620;
+
+    /* Parthenon – a marble/golden blend evoking the Parthenon’s grandeur */
+    --maia-ui-color-parthenon-50:  #fff8e6;
+    --maia-ui-color-parthenon-100: #fff1cc;
+    --maia-ui-color-parthenon-200: #ffe9b3;
+    --maia-ui-color-parthenon-300: #ffe199;
+    --maia-ui-color-parthenon-400: #ffd880;
+    --maia-ui-color-parthenon-500: #ffd066;
+    --maia-ui-color-parthenon-600: #cca858;
+    --maia-ui-color-parthenon-700: #b3884a;
+    --maia-ui-color-parthenon-800: #996c3c;
+    --maia-ui-color-parthenon-900: #80502e;
+    --maia-ui-color-parthenon-950: #664223;
+    --maia-ui-color-parthenon-1000: #4d3619;
+
+    /* Acropolis – cool stone tones with a hint of blue */
+    --maia-ui-color-acropolis-50:  #e8eef2;
+    --maia-ui-color-acropolis-100: #d1dde5;
+    --maia-ui-color-acropolis-200: #badccc;
+    --maia-ui-color-acropolis-300: #a3cbbf;
+    --maia-ui-color-acropolis-400: #8cbbae;
+    --maia-ui-color-acropolis-500: #75ab9d;
+    --maia-ui-color-acropolis-600: #5d978a;
+    --maia-ui-color-acropolis-700: #477675;
+    --maia-ui-color-acropolis-800: #316260;
+    --maia-ui-color-acropolis-900: #1b4d4b;
+    --maia-ui-color-acropolis-950: #153f3d;
+    --maia-ui-color-acropolis-1000: #102f2f;
+
+    /* Doric – warm limestone, subtle beige */
+    --maia-ui-color-doric-50:  #fdf8f3;
+    --maia-ui-color-doric-100: #fcf1e7;
+    --maia-ui-color-doric-200: #faf8da;
+    --maia-ui-color-doric-300: #f8f0ce;
+    --maia-ui-color-doric-400: #f7e9c2;
+    --maia-ui-color-doric-500: #f5e2b6;
+    --maia-ui-color-doric-600: #d9c9a0;
+    --maia-ui-color-doric-700: #bdaf8a;
+    --maia-ui-color-doric-800: #a39574;
+    --maia-ui-color-doric-900: #877f5e;
+    --maia-ui-color-doric-950: #6b6648;
+    --maia-ui-color-doric-1000: #4f4d32;
+
+    /* Ionic – elegant, refined off-whites */
+    --maia-ui-color-ionic-50:  #fefcfb;
+    --maia-ui-color-ionic-100: #fdf9f7;
+    --maia-ui-color-ionic-200: #fbf4f0;
+    --maia-ui-color-ionic-300: #f9efea;
+    --maia-ui-color-ionic-400: #f7eae4;
+    --maia-ui-color-ionic-500: #f5e5de;
+    --maia-ui-color-ionic-600: #dcd4c8;
+    --maia-ui-color-ionic-700: #c3c3b2;
+    --maia-ui-color-ionic-800: #aaa39c;
+    --maia-ui-color-ionic-900: #919387;
+    --maia-ui-color-ionic-950: #78727c;
+    --maia-ui-color-ionic-1000: #5f6166;
+
+    /* Corinthian – ornate, refined gold–bronze tones */
+    --maia-ui-color-corinthian-50:  #fff8e5;
+    --maia-ui-color-corinthian-100: #fff1cb;
+    --maia-ui-color-corinthian-200: #ffe9b2;
+    --maia-ui-color-corinthian-300: #ffe197;
+    --maia-ui-color-corinthian-400: #ffd97d;
+    --maia-ui-color-corinthian-500: #ffd063;
+    --maia-ui-color-corinthian-600: #cca658;
+    --maia-ui-color-corinthian-700: #b38b4d;
+    --maia-ui-color-corinthian-800: #997e43;
+    --maia-ui-color-corinthian-900: #806f39;
+    --maia-ui-color-corinthian-950: #665f2f;
+    --maia-ui-color-corinthian-1000: #4c5025;
+
+    /* Helios – maiaiant, sunlit golds */
+    --maia-ui-color-helios-50:  #fff9e0;
+    --maia-ui-color-helios-100: #fff3c2;
+    --maia-ui-color-helios-200: #ffec9f;
+    --maia-ui-color-helios-300: #ffe57c;
+    --maia-ui-color-helios-400: #ffde59;
+    --maia-ui-color-helios-500: #ffd636;
+    --maia-ui-color-helios-600: #e6c02e;
+    --maia-ui-color-helios-700: #cca026;
+    --maia-ui-color-helios-800: #b38c1e;
+    --maia-ui-color-helios-900: #997516;
+    --maia-ui-color-helios-950: #80600e;
+    --maia-ui-color-helios-1000: #664c06;
+
+    /* Selene – cool, silvery moonlight */
+    --maia-ui-color-selene-50:  #f7f7fb;
+    --maia-ui-color-selene-100: #f0f0f8;
+    --maia-ui-color-selene-200: #e8e8f5;
+    --maia-ui-color-selene-300: #e0e0f2;
+    --maia-ui-color-selene-400: #d8d8ef;
+    --maia-ui-color-selene-500: #d0d0ec;
+    --maia-ui-color-selene-600: #b8b8d2;
+    --maia-ui-color-selene-700: #a0a0b8;
+    --maia-ui-color-selene-800: #888898;
+    --maia-ui-color-selene-900: #70707e;
+    --maia-ui-color-selene-950: #585864;
+    --maia-ui-color-selene-1000: #40404a;
+
+    /* Olympus – majestic, cool stone blues */
+    --maia-ui-color-olympus-50:  #f4f6fa;
+    --maia-ui-color-olympus-100: #e9edf5;
+    --maia-ui-color-olympus-200: #d0dfe9;
+    --maia-ui-color-olympus-300: #b7d1dd;
+    --maia-ui-color-olympus-400: #9ec3d1;
+    --maia-ui-color-olympus-500: #85b5c5;
+    --maia-ui-color-olympus-600: #6a98a9;
+    --maia-ui-color-olympus-700: #4f7b8d;
+    --maia-ui-color-olympus-800: #346e71;
+    --maia-ui-color-olympus-900: #195055;
+    --maia-ui-color-olympus-950: #134048;
+    --maia-ui-color-olympus-1000: #0e303b;
+
+    /* Elysian – lush, ethereal greens */
+    --maia-ui-color-elysian-50:  #e7fbed;
+    --maia-ui-color-elysian-100: #cffddc;
+    --maia-ui-color-elysian-200: #b7f3cb;
+    --maia-ui-color-elysian-300: #9feba9;
+    --maia-ui-color-elysian-400: #87e388;
+    --maia-ui-color-elysian-500: #6fdb66;
+    --maia-ui-color-elysian-600: #60c752;
+    --maia-ui-color-elysian-700: #51ad3d;
+    --maia-ui-color-elysian-800: #429029;
+    --maia-ui-color-elysian-900: #337315;
+    --maia-ui-color-elysian-950: #285d0f;
+    --maia-ui-color-elysian-1000: #1d470a;
+
+    /* Cycladic – crisp, minimalist blues with a whitewash feel */
+    --maia-ui-color-cycladic-50:  #f2f9fb;
+    --maia-ui-color-cycladic-100: #e6f3f7;
+    --maia-ui-color-cycladic-200: #d9edf3;
+    --maia-ui-color-cycladic-300: #cce7ef;
+    --maia-ui-color-cycladic-400: #bfd1eb;
+    --maia-ui-color-cycladic-500: #b2bbe7;
+    --maia-ui-color-cycladic-600: #a6a5e3;
+    --maia-ui-color-cycladic-700: #9991df;
+    --maia-ui-color-cycladic-800: #8d7ddb;
+    --maia-ui-color-cycladic-900: #8069d7;
+    --maia-ui-color-cycladic-950: #7455d3;
+    --maia-ui-color-cycladic-1000: #6841cf;
+
+    /* Spartan – austere, muted red–browns */
+    --maia-ui-color-spartan-50:  #f8f2ef;
+    --maia-ui-color-spartan-100: #f2e5de;
+    --maia-ui-color-spartan-200: #ebd8cd;
+    --maia-ui-color-spartan-300: #e4cbc0;
+    --maia-ui-color-spartan-400: #ddbfaf;
+    --maia-ui-color-spartan-500: #d6b39e;
+    --maia-ui-color-spartan-600: #c0a088;
+    --maia-ui-color-spartan-700: #aa8b72;
+    --maia-ui-color-spartan-800: #94745c;
+    --maia-ui-color-spartan-900: #7e5e46;
+    --maia-ui-color-spartan-950: #694830;
+    --maia-ui-color-spartan-1000: #53301a;
+
+    /* Mycenaean – deep, regal golds with earthy undertones */
+    --maia-ui-color-mycenaean-50:  #fef8e8;
+    --maia-ui-color-mycenaean-100: #fdf1d1;
+    --maia-ui-color-mycenaean-200: #fbe9ba;
+    --maia-ui-color-mycenaean-300: #f9e2a3;
+    --maia-ui-color-mycenaean-400: #f7da8c;
+    --maia-ui-color-mycenaean-500: #f5d375;
+    --maia-ui-color-mycenaean-600: #dcbf66;
+    --maia-ui-color-mycenaean-700: #c3aa57;
+    --maia-ui-color-mycenaean-800: #aa9448;
+    --maia-ui-color-mycenaean-900: #917f39;
+    --maia-ui-color-mycenaean-950: #796b2a;
+    --maia-ui-color-mycenaean-1000: #60561b;
+
+    /* Athena – cool blues/greys of wisdom */
+    --maia-ui-color-athena-50:  #f0f8fa;
+    --maia-ui-color-athena-100: #e1f1f5;
+    --maia-ui-color-athena-200: #c2e3eb;
+    --maia-ui-color-athena-300: #a3d5e1;
+    --maia-ui-color-athena-400: #84c7d7;
+    --maia-ui-color-athena-500: #65b9cd;
+    --maia-ui-color-athena-600: #519eb4;
+    --maia-ui-color-athena-700: #3d838a;
+    --maia-ui-color-athena-800: #296960;
+    --maia-ui-color-athena-900: #144e36;
+    --maia-ui-color-athena-950: #0f3f2a;
+    --maia-ui-color-athena-1000: #0a311e;
+
+    /* Dionysian – vibrant purples and reds of revelry */
+    --maia-ui-color-dionysian-50:  #fde8f4;
+    --maia-ui-color-dionysian-100: #fbd0e9;
+    --maia-ui-color-dionysian-200: #f9b8de;
+    --maia-ui-color-dionysian-300: #f7a0d3;
+    --maia-ui-color-dionysian-400: #f589c8;
+    --maia-ui-color-dionysian-500: #f371bd;
+    --maia-ui-color-dionysian-600: #d25fae;
+    --maia-ui-color-dionysian-700: #b14d9f;
+    --maia-ui-color-dionysian-800: #903a90;
+    --maia-ui-color-dionysian-900: #703881;
+    --maia-ui-color-dionysian-950: #5a2c72;
+    --maia-ui-color-dionysian-1000: #441863;
+
+    /* Hermes – dynamic, vibrant oranges/yellows */
+    --maia-ui-color-hermes-50:  #fff7e0;
+    --maia-ui-color-hermes-100: #fff0c2;
+    --maia-ui-color-hermes-200: #ffe8a3;
+    --maia-ui-color-hermes-300: #ffe085;
+    --maia-ui-color-hermes-400: #ffda66;
+    --maia-ui-color-hermes-500: #ffd247;
+    --maia-ui-color-hermes-600: #e6ba3d;
+    --maia-ui-color-hermes-700: #cca133;
+    --maia-ui-color-hermes-800: #b38a29;
+    --maia-ui-color-hermes-900: #99701f;
+    --maia-ui-color-hermes-950: #805816;
+    --maia-ui-color-hermes-1000: #664d0c;
+}
+
+
+
+[data-accent-color=gray] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-gray-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-gray-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-gray-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-gray-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-gray-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-gray-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-gray-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-gray-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-gray-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-gray-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-gray-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-gray-1000);
+}
+
+[data-accent-color=mauve] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-mauve-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-mauve-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-mauve-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-mauve-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-mauve-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-mauve-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-mauve-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-mauve-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-mauve-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-mauve-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-mauve-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-mauve-1000);
+}
+
+[data-accent-color=slate] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-slate-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-slate-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-slate-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-slate-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-slate-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-slate-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-slate-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-slate-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-slate-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-slate-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-slate-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-slate-1000);
+}
+
+[data-accent-color=sage] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-sage-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-sage-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-sage-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-sage-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-sage-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-sage-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-sage-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-sage-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-sage-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-sage-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-sage-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-sage-1000);
+}
+
+[data-accent-color=olive] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-olive-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-olive-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-olive-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-olive-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-olive-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-olive-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-olive-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-olive-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-olive-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-olive-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-olive-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-olive-1000);
+}
+
+[data-accent-color=sand] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-sand-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-sand-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-sand-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-sand-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-sand-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-sand-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-sand-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-sand-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-sand-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-sand-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-sand-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-sand-1000);
+}
+
+[data-accent-color=tomato] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-tomato-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-tomato-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-tomato-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-tomato-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-tomato-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-tomato-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-tomato-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-tomato-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-tomato-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-tomato-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-tomato-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-tomato-1000);
+}
+
+[data-accent-color=red] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-red-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-red-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-red-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-red-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-red-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-red-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-red-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-red-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-red-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-red-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-red-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-red-1000);
+}
+
+[data-accent-color=ruby] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-ruby-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-ruby-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-ruby-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-ruby-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-ruby-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-ruby-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-ruby-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-ruby-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-ruby-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-ruby-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-ruby-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-ruby-1000);
+}
+
+[data-accent-color=crimson] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-crimson-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-crimson-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-crimson-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-crimson-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-crimson-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-crimson-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-crimson-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-crimson-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-crimson-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-crimson-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-crimson-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-crimson-1000);
+}
+
+[data-accent-color=pink] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-pink-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-pink-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-pink-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-pink-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-pink-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-pink-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-pink-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-pink-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-pink-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-pink-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-pink-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-pink-1000);
+}
+
+[data-accent-color=plum] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-plum-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-plum-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-plum-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-plum-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-plum-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-plum-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-plum-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-plum-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-plum-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-plum-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-plum-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-plum-1000);
+}
+
+[data-accent-color=purple] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-purple-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-purple-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-purple-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-purple-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-purple-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-purple-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-purple-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-purple-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-purple-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-purple-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-purple-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-purple-1000);
+}
+
+[data-accent-color=violet] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-violet-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-violet-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-violet-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-violet-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-violet-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-violet-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-violet-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-violet-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-violet-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-violet-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-violet-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-violet-1000);
+}
+
+[data-accent-color=iris] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-iris-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-iris-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-iris-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-iris-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-iris-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-iris-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-iris-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-iris-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-iris-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-iris-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-iris-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-iris-1000);
+}
+
+[data-accent-color=indigo] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-indigo-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-indigo-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-indigo-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-indigo-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-indigo-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-indigo-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-indigo-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-indigo-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-indigo-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-indigo-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-indigo-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-indigo-1000);
+}
+
+[data-accent-color=blue] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-blue-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-blue-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-blue-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-blue-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-blue-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-blue-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-blue-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-blue-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-blue-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-blue-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-blue-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-blue-1000);
+}
+
+[data-accent-color=cyan] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-cyan-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-cyan-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-cyan-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-cyan-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-cyan-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-cyan-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-cyan-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-cyan-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-cyan-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-cyan-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-cyan-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-cyan-1000);
+}
+
+[data-accent-color=teal] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-teal-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-teal-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-teal-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-teal-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-teal-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-teal-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-teal-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-teal-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-teal-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-teal-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-teal-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-teal-1000);
+}
+
+[data-accent-color=jade] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-jade-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-jade-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-jade-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-jade-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-jade-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-jade-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-jade-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-jade-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-jade-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-jade-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-jade-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-jade-1000);
+}
+
+[data-accent-color=green] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-green-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-green-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-green-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-green-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-green-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-green-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-green-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-green-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-green-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-green-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-green-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-green-1000);
+}
+
+[data-accent-color=grass] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-grass-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-grass-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-grass-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-grass-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-grass-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-grass-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-grass-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-grass-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-grass-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-grass-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-grass-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-grass-1000);
+}
+
+[data-accent-color=brown] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-brown-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-brown-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-brown-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-brown-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-brown-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-brown-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-brown-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-brown-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-brown-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-brown-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-brown-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-brown-1000);
+}
+
+[data-accent-color=bronze] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-bronze-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-bronze-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-bronze-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-bronze-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-bronze-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-bronze-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-bronze-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-bronze-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-bronze-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-bronze-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-bronze-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-bronze-1000);
+}
+
+[data-accent-color=gold] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-gold-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-gold-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-gold-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-gold-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-gold-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-gold-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-gold-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-gold-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-gold-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-gold-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-gold-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-gold-1000);
+}
+
+[data-accent-color=sky] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-sky-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-sky-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-sky-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-sky-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-sky-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-sky-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-sky-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-sky-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-sky-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-sky-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-sky-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-sky-1000);
+}
+
+[data-accent-color=mint] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-mint-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-mint-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-mint-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-mint-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-mint-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-mint-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-mint-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-mint-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-mint-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-mint-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-mint-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-mint-1000);
+}
+
+[data-accent-color=lime] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-lime-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-lime-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-lime-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-lime-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-lime-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-lime-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-lime-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-lime-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-lime-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-lime-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-lime-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-lime-1000);
+}
+
+[data-accent-color=yellow] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-yellow-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-yellow-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-yellow-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-yellow-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-yellow-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-yellow-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-yellow-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-yellow-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-yellow-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-yellow-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-yellow-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-yellow-1000);
+}
+
+[data-accent-color=amber] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-amber-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-amber-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-amber-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-amber-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-amber-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-amber-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-amber-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-amber-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-amber-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-amber-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-amber-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-amber-1000);
+}
+
+[data-accent-color=orange] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-orange-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-orange-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-orange-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-orange-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-orange-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-orange-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-orange-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-orange-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-orange-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-orange-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-orange-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-orange-1000);
+}
+
+/* Accent mappings for the new Maia UI sets */
+[data-accent-color="aegean"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-aegean-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-aegean-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-aegean-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-aegean-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-aegean-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-aegean-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-aegean-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-aegean-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-aegean-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-aegean-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-aegean-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-aegean-1000);
+}
+
+[data-accent-color="marble"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-marble-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-marble-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-marble-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-marble-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-marble-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-marble-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-marble-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-marble-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-marble-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-marble-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-marble-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-marble-1000);
+}
+
+[data-accent-color="terracotta"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-terracotta-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-terracotta-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-terracotta-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-terracotta-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-terracotta-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-terracotta-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-terracotta-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-terracotta-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-terracotta-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-terracotta-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-terracotta-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-terracotta-1000);
+}
+
+[data-accent-color="byzantine"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-byzantine-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-byzantine-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-byzantine-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-byzantine-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-byzantine-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-byzantine-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-byzantine-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-byzantine-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-byzantine-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-byzantine-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-byzantine-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-byzantine-1000);
+}
+
+[data-accent-color="parthenon"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-parthenon-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-parthenon-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-parthenon-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-parthenon-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-parthenon-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-parthenon-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-parthenon-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-parthenon-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-parthenon-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-parthenon-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-parthenon-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-parthenon-1000);
+}
+
+[data-accent-color="acropolis"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-acropolis-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-acropolis-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-acropolis-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-acropolis-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-acropolis-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-acropolis-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-acropolis-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-acropolis-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-acropolis-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-acropolis-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-acropolis-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-acropolis-1000);
+}
+
+[data-accent-color="doric"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-doric-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-doric-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-doric-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-doric-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-doric-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-doric-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-doric-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-doric-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-doric-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-doric-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-doric-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-doric-1000);
+}
+
+[data-accent-color="ionic"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-ionic-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-ionic-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-ionic-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-ionic-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-ionic-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-ionic-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-ionic-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-ionic-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-ionic-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-ionic-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-ionic-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-ionic-1000);
+}
+
+[data-accent-color="corinthian"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-corinthian-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-corinthian-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-corinthian-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-corinthian-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-corinthian-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-corinthian-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-corinthian-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-corinthian-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-corinthian-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-corinthian-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-corinthian-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-corinthian-1000);
+}
+
+[data-accent-color="helios"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-helios-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-helios-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-helios-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-helios-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-helios-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-helios-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-helios-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-helios-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-helios-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-helios-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-helios-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-helios-1000);
+}
+
+[data-accent-color="selene"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-selene-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-selene-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-selene-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-selene-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-selene-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-selene-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-selene-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-selene-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-selene-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-selene-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-selene-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-selene-1000);
+}
+
+[data-accent-color="olympus"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-olympus-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-olympus-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-olympus-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-olympus-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-olympus-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-olympus-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-olympus-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-olympus-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-olympus-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-olympus-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-olympus-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-olympus-1000);
+}
+
+[data-accent-color="elysian"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-elysian-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-elysian-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-elysian-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-elysian-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-elysian-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-elysian-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-elysian-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-elysian-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-elysian-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-elysian-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-elysian-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-elysian-1000);
+}
+
+[data-accent-color="cycladic"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-cycladic-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-cycladic-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-cycladic-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-cycladic-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-cycladic-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-cycladic-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-cycladic-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-cycladic-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-cycladic-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-cycladic-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-cycladic-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-cycladic-1000);
+}
+
+[data-accent-color="spartan"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-spartan-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-spartan-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-spartan-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-spartan-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-spartan-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-spartan-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-spartan-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-spartan-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-spartan-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-spartan-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-spartan-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-spartan-1000);
+}
+
+[data-accent-color="mycenaean"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-mycenaean-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-mycenaean-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-mycenaean-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-mycenaean-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-mycenaean-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-mycenaean-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-mycenaean-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-mycenaean-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-mycenaean-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-mycenaean-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-mycenaean-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-mycenaean-1000);
+}
+
+[data-accent-color="athena"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-athena-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-athena-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-athena-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-athena-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-athena-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-athena-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-athena-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-athena-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-athena-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-athena-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-athena-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-athena-1000);
+}
+
+[data-accent-color="dionysian"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-dionysian-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-dionysian-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-dionysian-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-dionysian-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-dionysian-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-dionysian-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-dionysian-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-dionysian-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-dionysian-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-dionysian-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-dionysian-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-dionysian-1000);
+}
+
+[data-accent-color="hermes"] {
+    --maia-ui-color-accent-50: var(--maia-ui-color-hermes-50);
+    --maia-ui-color-accent-100: var(--maia-ui-color-hermes-100);
+    --maia-ui-color-accent-200: var(--maia-ui-color-hermes-200);
+    --maia-ui-color-accent-300: var(--maia-ui-color-hermes-300);
+    --maia-ui-color-accent-400: var(--maia-ui-color-hermes-400);
+    --maia-ui-color-accent-500: var(--maia-ui-color-hermes-500);
+    --maia-ui-color-accent-600: var(--maia-ui-color-hermes-600);
+    --maia-ui-color-accent-700: var(--maia-ui-color-hermes-700);
+    --maia-ui-color-accent-800: var(--maia-ui-color-hermes-800);
+    --maia-ui-color-accent-900: var(--maia-ui-color-hermes-900);
+    --maia-ui-color-accent-950: var(--maia-ui-color-hermes-950);
+    --maia-ui-color-accent-1000: var(--maia-ui-color-hermes-1000);
+}
+
+
+.maia-ui-dark-theme {
+    --maia-ui-color-gray-50: hsl(0, 0%, 9.5%);
+    --maia-ui-color-gray-100: hsl(0, 0%, 10.5%);
+    --maia-ui-color-gray-200: hsl(0, 0%, 15.8%);
+    --maia-ui-color-gray-300: hsl(0, 0%, 18.9%);
+    --maia-ui-color-gray-400: hsl(0, 0%, 21.7%);
+    --maia-ui-color-gray-500: hsl(0, 0%, 24.7%);
+    --maia-ui-color-gray-600: hsl(0, 0%, 29.1%);
+    --maia-ui-color-gray-700: hsl(0, 0%, 37.5%);
+    --maia-ui-color-gray-800: hsl(0, 0%, 43.0%);
+    --maia-ui-color-gray-900: hsl(0, 0%, 50.7%);
+    --maia-ui-color-gray-950: hsl(0, 0%, 69.5%);
+    --maia-ui-color-gray-1000: hsl(0, 0%, 93.5%);
+    --maia-ui-color-mauve-50: hsl(300, 5.0%, 9.5%);
+    --maia-ui-color-mauve-100: hsl(300, 7.1%, 11.0%);
+    --maia-ui-color-mauve-200: hsl(290, 6.2%, 16.2%);
+    --maia-ui-color-mauve-300: hsl(285, 5.8%, 19.5%);
+    --maia-ui-color-mauve-400: hsl(280, 5.6%, 22.4%);
+    --maia-ui-color-mauve-500: hsl(276, 5.4%, 25.7%);
+    --maia-ui-color-mauve-600: hsl(269, 5.3%, 30.3%);
+    --maia-ui-color-mauve-700: hsl(258, 5.0%, 39.2%);
+    --maia-ui-color-mauve-800: hsl(250, 5.0%, 45.0%);
+    --maia-ui-color-mauve-900: hsl(252, 4.3%, 52.3%);
+    --maia-ui-color-mauve-950: hsl(250, 6.0%, 70.5%);
+    --maia-ui-color-mauve-1000: hsl(240, 7.0%, 93.8%);
+    --maia-ui-color-slate-50: hsl(240, 5.0%, 9.8%);
+    --maia-ui-color-slate-100: hsl(240, 6.9%, 11.4%);
+    --maia-ui-color-slate-200: hsl(227, 6.7%, 16.4%);
+    --maia-ui-color-slate-300: hsl(222, 6.6%, 19.4%);
+    --maia-ui-color-slate-400: hsl(218, 6.5%, 22.1%);
+    --maia-ui-color-slate-500: hsl(214, 6.4%, 25.1%);
+    --maia-ui-color-slate-600: hsl(209, 6.2%, 29.4%);
+    --maia-ui-color-slate-700: hsl(202, 5.8%, 37.5%);
+    --maia-ui-color-slate-800: hsl(220, 6.0%, 44.0%);
+    --maia-ui-color-slate-900: hsl(218, 5.3%, 51.5%);
+    --maia-ui-color-slate-950: hsl(220, 7.0%, 70.0%);
+    --maia-ui-color-slate-1000: hsl(220, 7.0%, 93.5%);
+    --maia-ui-color-sage-50: hsl(155, 7.0%, 9.2%);
+    --maia-ui-color-sage-100: hsl(150, 7.7%, 10.2%);
+    --maia-ui-color-sage-200: hsl(150, 7.0%, 15.5%);
+    --maia-ui-color-sage-300: hsl(152, 4.7%, 18.3%);
+    --maia-ui-color-sage-400: hsl(153, 4.2%, 21.1%);
+    --maia-ui-color-sage-500: hsl(153, 3.7%, 24.2%);
+    --maia-ui-color-sage-600: hsl(154, 3.3%, 28.7%);
+    --maia-ui-color-sage-700: hsl(156, 2.6%, 37.1%);
+    --maia-ui-color-sage-800: hsl(155, 6.0%, 41.5%);
+    --maia-ui-color-sage-900: hsl(157, 4.6%, 49.2%);
+    --maia-ui-color-sage-950: hsl(155, 5.0%, 68.3%);
+    --maia-ui-color-sage-1000: hsl(155, 7.0%, 93.0%);
+    --maia-ui-color-olive-50: hsl(110, 5.0%, 9.2%);
+    --maia-ui-color-olive-100: hsl(120, 5.7%, 10.4%);
+    --maia-ui-color-olive-200: hsl(120, 4.3%, 15.4%);
+    --maia-ui-color-olive-300: hsl(120, 3.9%, 18.5%);
+    --maia-ui-color-olive-400: hsl(120, 3.6%, 21.2%);
+    --maia-ui-color-olive-500: hsl(120, 3.3%, 24.3%);
+    --maia-ui-color-olive-600: hsl(120, 3.0%, 28.7%);
+    --maia-ui-color-olive-700: hsl(120, 2.6%, 37.1%);
+    --maia-ui-color-olive-800: hsl(110, 6.0%, 41.5%);
+    --maia-ui-color-olive-900: hsl(106, 4.6%, 49.3%);
+    --maia-ui-color-olive-950: hsl(110, 5.0%, 68.8%);
+    --maia-ui-color-olive-1000: hsl(110, 7.0%, 93.0%);
+    --maia-ui-color-sand-50: hsl(60, 6.0%, 9.0%);
+    --maia-ui-color-sand-100: hsl(60, 6.9%, 10.4%);
+    --maia-ui-color-sand-200: hsl(60, 5.2%, 15.4%);
+    --maia-ui-color-sand-300: hsl(60, 4.7%, 18.5%);
+    --maia-ui-color-sand-400: hsl(60, 4.4%, 21.2%);
+    --maia-ui-color-sand-500: hsl(60, 4.1%, 24.3%);
+    --maia-ui-color-sand-600: hsl(60, 3.8%, 28.7%);
+    --maia-ui-color-sand-700: hsl(60, 3.3%, 37.1%);
+    --maia-ui-color-sand-800: hsl(60, 6.0%, 41.5%);
+    --maia-ui-color-sand-900: hsl(60, 4.6%, 49.3%);
+    --maia-ui-color-sand-950: hsl(60, 5.0%, 68.8%);
+    --maia-ui-color-sand-1000: hsl(60, 7.0%, 93.0%);
+    --maia-ui-color-tomato-50: hsl(10, 23.0%, 9.4%);
+    --maia-ui-color-tomato-100: hsl(10, 39.0%, 11.6%);
+    --maia-ui-color-tomato-200: hsl(9, 48.3%, 15.5%);
+    --maia-ui-color-tomato-300: hsl(9, 53.0%, 18.1%);
+    --maia-ui-color-tomato-400: hsl(9, 57.0%, 20.7%);
+    --maia-ui-color-tomato-500: hsl(9, 61.8%, 24.5%);
+    --maia-ui-color-tomato-600: hsl(9, 68.4%, 31.1%);
+    --maia-ui-color-tomato-700: hsl(10, 80.4%, 43.9%);
+    --maia-ui-color-tomato-800: hsl(10, 78.0%, 54.0%);
+    --maia-ui-color-tomato-900: hsl(10, 88.4%, 64.1%);
+    --maia-ui-color-tomato-950: hsl(10, 100%, 72.0%);
+    --maia-ui-color-tomato-1000: hsl(10, 85.0%, 89.0%);
+    --maia-ui-color-red-50: hsl(353, 23.0%, 9.8%);
+    --maia-ui-color-red-100: hsl(354, 30.2%, 12.4%);
+    --maia-ui-color-red-200: hsl(353, 40.8%, 16.4%);
+    --maia-ui-color-red-300: hsl(353, 46.3%, 19.2%);
+    --maia-ui-color-red-400: hsl(353, 51.2%, 22.1%);
+    --maia-ui-color-red-500: hsl(353, 57.3%, 26.2%);
+    --maia-ui-color-red-600: hsl(354, 65.7%, 33.2%);
+    --maia-ui-color-red-700: hsl(358, 75.0%, 47.1%);
+    --maia-ui-color-red-800: hsl(358, 75.0%, 59.0%);
+    --maia-ui-color-red-900: hsl(359, 84.8%, 67.6%);
+    --maia-ui-color-red-950: hsl(358, 100%, 76.0%);
+    --maia-ui-color-red-1000: hsl(350, 100%, 91.0%);
+    --maia-ui-color-ruby-50: hsl(343, 23.0%, 10.0%);
+    --maia-ui-color-ruby-100: hsl(349, 33.3%, 12.4%);
+    --maia-ui-color-ruby-200: hsl(348, 42.2%, 16.4%);
+    --maia-ui-color-ruby-300: hsl(348, 46.8%, 19.1%);
+    --maia-ui-color-ruby-400: hsl(348, 50.7%, 21.7%);
+    --maia-ui-color-ruby-500: hsl(348, 56.0%, 25.7%);
+    --maia-ui-color-ruby-600: hsl(348, 64.3%, 33.0%);
+    --maia-ui-color-ruby-700: hsl(348, 77.0%, 46.1%);
+    --maia-ui-color-ruby-800: hsl(348, 75.0%, 58.5%);
+    --maia-ui-color-ruby-900: hsl(349, 84.1%, 67.1%);
+    --maia-ui-color-ruby-950: hsl(348, 100%, 76.0%);
+    --maia-ui-color-ruby-1000: hsl(340, 95.0%, 91.0%);
+    --maia-ui-color-crimson-50: hsl(335, 20.0%, 9.6%);
+    --maia-ui-color-crimson-100: hsl(336, 32.3%, 12.2%);
+    --maia-ui-color-crimson-200: hsl(336, 40.2%, 16.0%);
+    --maia-ui-color-crimson-300: hsl(336, 44.4%, 18.5%);
+    --maia-ui-color-crimson-400: hsl(336, 48.4%, 21.3%);
+    --maia-ui-color-crimson-500: hsl(336, 53.9%, 25.5%);
+    --maia-ui-color-crimson-600: hsl(336, 62.7%, 32.8%);
+    --maia-ui-color-crimson-700: hsl(336, 80.0%, 45.1%);
+    --maia-ui-color-crimson-800: hsl(336, 80.0%, 57.8%);
+    --maia-ui-color-crimson-900: hsl(339, 87.0%, 67.2%);
+    --maia-ui-color-crimson-950: hsl(341, 100%, 76.0%);
+    --maia-ui-color-crimson-1000: hsl(330, 90.0%, 91.0%);
+    --maia-ui-color-pink-50: hsl(318, 20.0%, 9.6%);
+    --maia-ui-color-pink-100: hsl(318, 32.3%, 12.2%);
+    --maia-ui-color-pink-200: hsl(318, 37.1%, 15.7%);
+    --maia-ui-color-pink-300: hsl(318, 39.8%, 18.1%);
+    --maia-ui-color-pink-400: hsl(318, 42.3%, 20.8%);
+    --maia-ui-color-pink-500: hsl(318, 45.8%, 24.9%);
+    --maia-ui-color-pink-600: hsl(318, 51.2%, 32.2%);
+    --maia-ui-color-pink-700: hsl(318, 60.0%, 46.1%);
+    --maia-ui-color-pink-800: hsl(318, 65.0%, 54.5%);
+    --maia-ui-color-pink-900: hsl(318, 71.5%, 63.2%);
+    --maia-ui-color-pink-950: hsl(318, 90.0%, 75.0%);
+    --maia-ui-color-pink-1000: hsl(318, 90.0%, 90.5%);
+    --maia-ui-color-plum-50: hsl(301, 20.0%, 9.4%);
+    --maia-ui-color-plum-100: hsl(300, 28.8%, 11.6%);
+    --maia-ui-color-plum-200: hsl(299, 31.8%, 15.5%);
+    --maia-ui-color-plum-300: hsl(298, 33.4%, 18.3%);
+    --maia-ui-color-plum-400: hsl(297, 34.6%, 21.0%);
+    --maia-ui-color-plum-500: hsl(296, 36.0%, 25.1%);
+    --maia-ui-color-plum-600: hsl(295, 37.9%, 32.7%);
+    --maia-ui-color-plum-700: hsl(292, 40.2%, 47.8%);
+    --maia-ui-color-plum-800: hsl(292, 45.0%, 51.0%);
+    --maia-ui-color-plum-900: hsl(291, 51.2%, 60.2%);
+    --maia-ui-color-plum-950: hsl(290, 70.0%, 74.0%);
+    --maia-ui-color-plum-1000: hsl(300, 60.0%, 89.5%);
+    --maia-ui-color-purple-50: hsl(284, 20.0%, 9.6%);
+    --maia-ui-color-purple-100: hsl(284, 31.1%, 12.0%);
+    --maia-ui-color-purple-200: hsl(282, 35.1%, 16.8%);
+    --maia-ui-color-purple-300: hsl(281, 36.9%, 20.1%);
+    --maia-ui-color-purple-400: hsl(280, 38.1%, 23.0%);
+    --maia-ui-color-purple-500: hsl(278, 39.5%, 27.3%);
+    --maia-ui-color-purple-600: hsl(276, 41.1%, 35.1%);
+    --maia-ui-color-purple-700: hsl(272, 42.7%, 50.0%);
+    --maia-ui-color-purple-800: hsl(272, 51.0%, 54.0%);
+    --maia-ui-color-purple-900: hsl(271, 57.8%, 61.2%);
+    --maia-ui-color-purple-950: hsl(270, 90.0%, 78.0%);
+    --maia-ui-color-purple-1000: hsl(275, 75.0%, 91.5%);
+    --maia-ui-color-violet-50: #14121f;
+    --maia-ui-color-violet-100: #1b1525;
+    --maia-ui-color-violet-200: #291f43;
+    --maia-ui-color-violet-300: #33255b;
+    --maia-ui-color-violet-400: #3c2e69;
+    --maia-ui-color-violet-500: #473876;
+    --maia-ui-color-violet-600: #56468b;
+    --maia-ui-color-violet-700: #6958ad;
+    --maia-ui-color-violet-800: #6e56cf;
+    --maia-ui-color-violet-900: #7d66d9;
+    --maia-ui-color-violet-950: #baa7ff;
+    --maia-ui-color-violet-1000: #e2ddfe;
+    --maia-ui-color-iris-50: #13131e;
+    --maia-ui-color-iris-100: #171625;
+    --maia-ui-color-iris-200: #202248;
+    --maia-ui-color-iris-300: #262a65;
+    --maia-ui-color-iris-400: #303374;
+    --maia-ui-color-iris-500: #3d3e82;
+    --maia-ui-color-iris-600: #4a4a95;
+    --maia-ui-color-iris-700: #5958b1;
+    --maia-ui-color-iris-800: #5b5bd6;
+    --maia-ui-color-iris-900: #6e6ade;
+    --maia-ui-color-iris-950: #b1a9ff;
+    --maia-ui-color-iris-1000: #e0dffe;
+    --maia-ui-color-indigo-50: #11131f;
+    --maia-ui-color-indigo-100: #141726;
+    --maia-ui-color-indigo-200: #182449;
+    --maia-ui-color-indigo-300: #1d2e62;
+    --maia-ui-color-indigo-400: #253974;
+    --maia-ui-color-indigo-500: #304384;
+    --maia-ui-color-indigo-600: #3a4f97;
+    --maia-ui-color-indigo-700: #435db1;
+    --maia-ui-color-indigo-800: #3e63dd;
+    --maia-ui-color-indigo-900: #5472e4;
+    --maia-ui-color-indigo-950: #9eb1ff;
+    --maia-ui-color-indigo-1000: #d6e1ff;
+    --maia-ui-color-blue-50: #0d1520;
+    --maia-ui-color-blue-100: #111927;
+    --maia-ui-color-blue-200: #0d2847;
+    --maia-ui-color-blue-300: #003362;
+    --maia-ui-color-blue-400: #004074;
+    --maia-ui-color-blue-500: #104d87;
+    --maia-ui-color-blue-600: #205d9e;
+    --maia-ui-color-blue-700: #2870bd;
+    --maia-ui-color-blue-800: #0090ff;
+    --maia-ui-color-blue-900: #3b9eff;
+    --maia-ui-color-blue-950: #70b8ff;
+    --maia-ui-color-blue-1000: #c2e6ff;
+    --maia-ui-color-cyan-50: #0b161a;
+    --maia-ui-color-cyan-100: #101b20;
+    --maia-ui-color-cyan-200: #082c36;
+    --maia-ui-color-cyan-300: #003848;
+    --maia-ui-color-cyan-400: #004558;
+    --maia-ui-color-cyan-500: #045468;
+    --maia-ui-color-cyan-600: #12677e;
+    --maia-ui-color-cyan-700: #11809c;
+    --maia-ui-color-cyan-800: #00a2c7;
+    --maia-ui-color-cyan-900: #23afd0;
+    --maia-ui-color-cyan-950: #4ccce6;
+    --maia-ui-color-cyan-1000: #b6ecf7;
+    --maia-ui-color-teal-50: #0d1512;
+    --maia-ui-color-teal-100: #121c18;
+    --maia-ui-color-teal-200: #0f2e22;
+    --maia-ui-color-teal-300: #0b3b2c;
+    --maia-ui-color-teal-400: #114837;
+    --maia-ui-color-teal-500: #1b5745;
+    --maia-ui-color-teal-600: #246854;
+    --maia-ui-color-teal-700: #2a7e68;
+    --maia-ui-color-teal-800: #29a383;
+    --maia-ui-color-teal-900: #27b08b;
+    --maia-ui-color-teal-950: #1fd8a4;
+    --maia-ui-color-teal-1000: #adf0d4;
+    --maia-ui-color-jade-50: #0d1512;
+    --maia-ui-color-jade-100: #121c18;
+    --maia-ui-color-jade-200: #0f2e22;
+    --maia-ui-color-jade-300: #0b3b2c;
+    --maia-ui-color-jade-400: #114837;
+    --maia-ui-color-jade-500: #1b5745;
+    --maia-ui-color-jade-600: #246854;
+    --maia-ui-color-jade-700: #2a7e68;
+    --maia-ui-color-jade-800: #29a383;
+    --maia-ui-color-jade-900: #27b08b;
+    --maia-ui-color-jade-950: #1fd8a4;
+    --maia-ui-color-jade-1000: #adf0d4;
+    --maia-ui-color-green-50: #0e1512;
+    --maia-ui-color-green-100: #121b17;
+    --maia-ui-color-green-200: #132d21;
+    --maia-ui-color-green-300: #113b29;
+    --maia-ui-color-green-400: #174933;
+    --maia-ui-color-green-500: #20573e;
+    --maia-ui-color-green-600: #28684a;
+    --maia-ui-color-green-700: #2f7c57;
+    --maia-ui-color-green-800: #30a46c;
+    --maia-ui-color-green-900: #33b074;
+    --maia-ui-color-green-950: #3dd68c;
+    --maia-ui-color-green-1000: #b1f1cb;
+    --maia-ui-color-grass-50: #0e1511;
+    --maia-ui-color-grass-100: #141a15;
+    --maia-ui-color-grass-200: #1b2a1e;
+    --maia-ui-color-grass-300: #1d3a24;
+    --maia-ui-color-grass-400: #25482d;
+    --maia-ui-color-grass-500: #2d5736;
+    --maia-ui-color-grass-600: #366740;
+    --maia-ui-color-grass-700: #3e7949;
+    --maia-ui-color-grass-800: #46a758;
+    --maia-ui-color-grass-900: #53b365;
+    --maia-ui-color-grass-950: #71d083;
+    --maia-ui-color-grass-1000: #c2f0c2;
+    --maia-ui-color-brown-50: #12110f;
+    --maia-ui-color-brown-100: #1c1816;
+    --maia-ui-color-brown-200: #28211d;
+    --maia-ui-color-brown-300: #322922;
+    --maia-ui-color-brown-400: #3e3128;
+    --maia-ui-color-brown-500: #4d3c2f;
+    --maia-ui-color-brown-600: #614a39;
+    --maia-ui-color-brown-700: #7c5f46;
+    --maia-ui-color-brown-800: #ad7f58;
+    --maia-ui-color-brown-900: #b88c67;
+    --maia-ui-color-brown-950: #dbb594;
+    --maia-ui-color-brown-1000: #f2e1ca;
+    --maia-ui-color-bronze-50: #141110;
+    --maia-ui-color-bronze-100: #1a1715;
+    --maia-ui-color-bronze-200: #26221e;
+    --maia-ui-color-bronze-300: #2f2a24;
+    --maia-ui-color-bronze-400: #3b3330;
+    --maia-ui-color-bronze-500: #493e3a;
+    --maia-ui-color-bronze-600: #5a4c47;
+    --maia-ui-color-bronze-700: #6f5f58;
+    --maia-ui-color-bronze-800: #a18072;
+    --maia-ui-color-bronze-900: #ae8c7e;
+    --maia-ui-color-bronze-950: #d4b3a5;
+    --maia-ui-color-bronze-1000: #ede0d9;
+    --maia-ui-color-gold-50: #121211;
+    --maia-ui-color-gold-100: #1b1a17;
+    --maia-ui-color-gold-200: #24231f;
+    --maia-ui-color-gold-300: #2d2b26;
+    --maia-ui-color-gold-400: #38352e;
+    --maia-ui-color-gold-500: #444039;
+    --maia-ui-color-gold-600: #544f46;
+    --maia-ui-color-gold-700: #696256;
+    --maia-ui-color-gold-800: #978365;
+    --maia-ui-color-gold-900: #a39073;
+    --maia-ui-color-gold-950: #cbb99f;
+    --maia-ui-color-gold-1000: #e8e2d9;
+    --maia-ui-color-sky-50: #0d141f;
+    --maia-ui-color-sky-100: #111a27;
+    --maia-ui-color-sky-200: #112840;
+    --maia-ui-color-sky-300: #113555;
+    --maia-ui-color-sky-400: #154467;
+    --maia-ui-color-sky-500: #1b537b;
+    --maia-ui-color-sky-600: #1f6692;
+    --maia-ui-color-sky-700: #197cae;
+    --maia-ui-color-sky-800: #7ce2fe;
+    --maia-ui-color-sky-900: #a8eeff;
+    --maia-ui-color-sky-950: #75c7f0;
+    --maia-ui-color-sky-1000: #c2f3ff;
+    --maia-ui-color-mint-50: #0e1515;
+    --maia-ui-color-mint-100: #0f1b1b;
+    --maia-ui-color-mint-200: #092c2b;
+    --maia-ui-color-mint-300: #003a38;
+    --maia-ui-color-mint-400: #004744;
+    --maia-ui-color-mint-500: #105650;
+    --maia-ui-color-mint-600: #1e685f;
+    --maia-ui-color-mint-700: #277f70;
+    --maia-ui-color-mint-800: #86ead4;
+    --maia-ui-color-mint-900: #a8f5e5;
+    --maia-ui-color-mint-950: #58d5ba;
+    --maia-ui-color-mint-1000: #c4f5e1;
+    --maia-ui-color-lime-50: #11130c;
+    --maia-ui-color-lime-100: #151a10;
+    --maia-ui-color-lime-200: #1f2917;
+    --maia-ui-color-lime-300: #29371d;
+    --maia-ui-color-lime-400: #334423;
+    --maia-ui-color-lime-500: #3d522a;
+    --maia-ui-color-lime-600: #496231;
+    --maia-ui-color-lime-700: #577538;
+    --maia-ui-color-lime-800: #bdee63;
+    --maia-ui-color-lime-900: #d4ff70;
+    --maia-ui-color-lime-950: #bde56c;
+    --maia-ui-color-lime-1000: #e3f7ba;
+    --maia-ui-color-yellow-50: #14120b;
+    --maia-ui-color-yellow-100: #1b180f;
+    --maia-ui-color-yellow-200: #2d2305;
+    --maia-ui-color-yellow-300: #362b00;
+    --maia-ui-color-yellow-400: #433500;
+    --maia-ui-color-yellow-500: #524202;
+    --maia-ui-color-yellow-600: #665417;
+    --maia-ui-color-yellow-700: #836a21;
+    --maia-ui-color-yellow-800: #ffe629;
+    --maia-ui-color-yellow-900: #ffff57;
+    --maia-ui-color-yellow-950: #f5e147;
+    --maia-ui-color-yellow-1000: #f6eeb4;
+    --maia-ui-color-amber-50: #16120c;
+    --maia-ui-color-amber-100: #1d180f;
+    --maia-ui-color-amber-200: #302008;
+    --maia-ui-color-amber-300: #3f2700;
+    --maia-ui-color-amber-400: #4d3000;
+    --maia-ui-color-amber-500: #5c3d05;
+    --maia-ui-color-amber-600: #714f19;
+    --maia-ui-color-amber-700: #8f6424;
+    --maia-ui-color-amber-800: #ffc53d;
+    --maia-ui-color-amber-900: #ffd60a;
+    --maia-ui-color-amber-950: #ffca16;
+    --maia-ui-color-amber-1000: #ffe7b3;
+    --maia-ui-color-orange-50: #17120e;
+    --maia-ui-color-orange-100: #1e160f;
+    --maia-ui-color-orange-200: #331e0b;
+    --maia-ui-color-orange-300: #462100;
+    --maia-ui-color-orange-400: #562800;
+    --maia-ui-color-orange-500: #66350c;
+    --maia-ui-color-orange-600: #7e451d;
+    --maia-ui-color-orange-700: #a35829;
+    --maia-ui-color-orange-800: #f76b15;
+    --maia-ui-color-orange-900: #ff801f;
+    --maia-ui-color-orange-950: #ffa057;
+    --maia-ui-color-orange-1000: #ffe0c2;
+    /* Aegean Dark Scale (reversed) */
+    --maia-ui-color-aegean-50:  #0340b0;
+    --maia-ui-color-aegean-100: #0864e0;
+    --maia-ui-color-aegean-200: #0a78ff;
+    --maia-ui-color-aegean-300: #128fff;
+    --maia-ui-color-aegean-400: #1da8ff;
+    --maia-ui-color-aegean-500: #29bfff;
+    --maia-ui-color-aegean-600: #36d6ff;
+    --maia-ui-color-aegean-700: #59e0ff;
+    --maia-ui-color-aegean-800: #7ceaff;
+    --maia-ui-color-aegean-900: #9fe5ff;
+    --maia-ui-color-aegean-950: #c2efff;
+    --maia-ui-color-aegean-1000: #e3f9ff;
+
+    /* Marble Dark Scale (reversed) */
+    --maia-ui-color-marble-50:  #ffdbd8;
+    --maia-ui-color-marble-100: #ffe0dd;
+    --maia-ui-color-marble-200: #ffe5e2;
+    --maia-ui-color-marble-300: #ffe9e6;
+    --maia-ui-color-marble-400: #ffedea;
+    --maia-ui-color-marble-500: #fff1ee;
+    --maia-ui-color-marble-600: #fff4f2;
+    --maia-ui-color-marble-700: #fff7f5;
+    --maia-ui-color-marble-800: #fffaf9;
+    --maia-ui-color-marble-900: #fffcfc;
+    --maia-ui-color-marble-950: #fffdfd;
+    --maia-ui-color-marble-1000: #fffefe;
+
+    /* Terracotta Dark Scale (reversed) */
+    --maia-ui-color-terracotta-50:  #522a18;
+    --maia-ui-color-terracotta-100: #69351f;
+    --maia-ui-color-terracotta-200: #803f27;
+    --maia-ui-color-terracotta-300: #994a30;
+    --maia-ui-color-terracotta-400: #b3643a;
+    --maia-ui-color-terracotta-500: #cc6f45;
+    --maia-ui-color-terracotta-600: #e67a50;
+    --maia-ui-color-terracotta-700: #ea8f6e;
+    --maia-ui-color-terracotta-800: #eea58c;
+    --maia-ui-color-terracotta-900: #f2bca8;
+    --maia-ui-color-terracotta-950: #f7d3c6;
+    --maia-ui-color-terracotta-1000: #fbeae3;
+
+    /* Byzantine Dark Scale (reversed) */
+    --maia-ui-color-byzantine-50:  #350620;
+    --maia-ui-color-byzantine-100: #4a0c30;
+    --maia-ui-color-byzantine-200: #5f1340;
+    --maia-ui-color-byzantine-300: #761a60;
+    --maia-ui-color-byzantine-400: #8c2188;
+    --maia-ui-color-byzantine-500: #a329b0;
+    --maia-ui-color-byzantine-600: #ba31c9;
+    --maia-ui-color-byzantine-700: #c555d2;
+    --maia-ui-color-byzantine-800: #d079db;
+    --maia-ui-color-byzantine-900: #dc9de5;
+    --maia-ui-color-byzantine-950: #e8c1ee;
+    --maia-ui-color-byzantine-1000: #f3e5f7;
+
+    /* Parthenon Dark Scale (reversed) */
+    --maia-ui-color-parthenon-50:  #4d3619;
+    --maia-ui-color-parthenon-100: #664223;
+    --maia-ui-color-parthenon-200: #80502e;
+    --maia-ui-color-parthenon-300: #996c3c;
+    --maia-ui-color-parthenon-400: #b3884a;
+    --maia-ui-color-parthenon-500: #cca858;
+    --maia-ui-color-parthenon-600: #ffd066;
+    --maia-ui-color-parthenon-700: #ffd880;
+    --maia-ui-color-parthenon-800: #ffe199;
+    --maia-ui-color-parthenon-900: #ffe9b3;
+    --maia-ui-color-parthenon-950: #fff1cc;
+    --maia-ui-color-parthenon-1000: #fff8e6;
+
+    /* Acropolis Dark Scale (reversed) */
+    --maia-ui-color-acropolis-50:  #102f2f;
+    --maia-ui-color-acropolis-100: #153f3d;
+    --maia-ui-color-acropolis-200: #1b4d4b;
+    --maia-ui-color-acropolis-300: #316260;
+    --maia-ui-color-acropolis-400: #477675;
+    --maia-ui-color-acropolis-500: #5d978a;
+    --maia-ui-color-acropolis-600: #75ab9d;
+    --maia-ui-color-acropolis-700: #8cbbae;
+    --maia-ui-color-acropolis-800: #a3cbbf;
+    --maia-ui-color-acropolis-900: #badccc;
+    --maia-ui-color-acropolis-950: #d1dde5;
+    --maia-ui-color-acropolis-1000: #e8eef2;
+
+    /* Doric Dark Scale (reversed) */
+    --maia-ui-color-doric-50:  #4f4d32;
+    --maia-ui-color-doric-100: #6b6648;
+    --maia-ui-color-doric-200: #877f5e;
+    --maia-ui-color-doric-300: #a39574;
+    --maia-ui-color-doric-400: #bdaf8a;
+    --maia-ui-color-doric-500: #d9c9a0;
+    --maia-ui-color-doric-600: #f5e2b6;
+    --maia-ui-color-doric-700: #f7e9c2;
+    --maia-ui-color-doric-800: #f8f0ce;
+    --maia-ui-color-doric-900: #faf8da;
+    --maia-ui-color-doric-950: #fcf1e7;
+    --maia-ui-color-doric-1000: #fdf8f3;
+
+    /* Ionic Dark Scale (reversed) */
+    --maia-ui-color-ionic-50:  #5f6166;
+    --maia-ui-color-ionic-100: #78727c;
+    --maia-ui-color-ionic-200: #919387;
+    --maia-ui-color-ionic-300: #aaa39c;
+    --maia-ui-color-ionic-400: #c3c3b2;
+    --maia-ui-color-ionic-500: #dcd4c8;
+    --maia-ui-color-ionic-600: #f5e5de;
+    --maia-ui-color-ionic-700: #f7eae4;
+    --maia-ui-color-ionic-800: #f9efea;
+    --maia-ui-color-ionic-900: #fbf4f0;
+    --maia-ui-color-ionic-950: #fdf9f7;
+    --maia-ui-color-ionic-1000: #fefcfb;
+
+    /* Corinthian Dark Scale (reversed) */
+    --maia-ui-color-corinthian-50:  #4c5025;
+    --maia-ui-color-corinthian-100: #665f2f;
+    --maia-ui-color-corinthian-200: #806f39;
+    --maia-ui-color-corinthian-300: #997e43;
+    --maia-ui-color-corinthian-400: #b38b4d;
+    --maia-ui-color-corinthian-500: #cca658;
+    --maia-ui-color-corinthian-600: #ffd063;
+    --maia-ui-color-corinthian-700: #ffd97d;
+    --maia-ui-color-corinthian-800: #ffe197;
+    --maia-ui-color-corinthian-900: #ffe9b2;
+    --maia-ui-color-corinthian-950: #fff1cb;
+    --maia-ui-color-corinthian-1000: #fff8e5;
+
+    /* Helios Dark Scale (reversed) */
+    --maia-ui-color-helios-50:  #664c06;
+    --maia-ui-color-helios-100: #80600e;
+    --maia-ui-color-helios-200: #997516;
+    --maia-ui-color-helios-300: #b38c1e;
+    --maia-ui-color-helios-400: #cca026;
+    --maia-ui-color-helios-500: #e6c02e;
+    --maia-ui-color-helios-600: #ffd636;
+    --maia-ui-color-helios-700: #ffde59;
+    --maia-ui-color-helios-800: #ffe57c;
+    --maia-ui-color-helios-900: #ffec9f;
+    --maia-ui-color-helios-950: #fff3c2;
+    --maia-ui-color-helios-1000: #fff9e0;
+
+    /* Selene Dark Scale (reversed) */
+    --maia-ui-color-selene-50:  #40404a;
+    --maia-ui-color-selene-100: #585864;
+    --maia-ui-color-selene-200: #70707e;
+    --maia-ui-color-selene-300: #888898;
+    --maia-ui-color-selene-400: #a0a0b8;
+    --maia-ui-color-selene-500: #b8b8d2;
+    --maia-ui-color-selene-600: #d0d0ec;
+    --maia-ui-color-selene-700: #d8d8ef;
+    --maia-ui-color-selene-800: #e0e0f2;
+    --maia-ui-color-selene-900: #e8e8f5;
+    --maia-ui-color-selene-950: #f0f0f8;
+    --maia-ui-color-selene-1000: #f7f7fb;
+
+    /* Olympus Dark Scale (reversed) */
+    --maia-ui-color-olympus-50:  #0e303b;
+    --maia-ui-color-olympus-100: #134048;
+    --maia-ui-color-olympus-200: #195055;
+    --maia-ui-color-olympus-300: #346e71;
+    --maia-ui-color-olympus-400: #4f7b8d;
+    --maia-ui-color-olympus-500: #6a98a9;
+    --maia-ui-color-olympus-600: #85b5c5;
+    --maia-ui-color-olympus-700: #9ec3d1;
+    --maia-ui-color-olympus-800: #b7d1dd;
+    --maia-ui-color-olympus-900: #d0dfe9;
+    --maia-ui-color-olympus-950: #e9edf5;
+    --maia-ui-color-olympus-1000: #f4f6fa;
+
+    /* Elysian Dark Scale (reversed) */
+    --maia-ui-color-elysian-50:  #1d470a;
+    --maia-ui-color-elysian-100: #285d0f;
+    --maia-ui-color-elysian-200: #337315;
+    --maia-ui-color-elysian-300: #429029;
+    --maia-ui-color-elysian-400: #51ad3d;
+    --maia-ui-color-elysian-500: #60c752;
+    --maia-ui-color-elysian-600: #6fdb66;
+    --maia-ui-color-elysian-700: #87e388;
+    --maia-ui-color-elysian-800: #9feba9;
+    --maia-ui-color-elysian-900: #b7f3cb;
+    --maia-ui-color-elysian-950: #cffddc;
+    --maia-ui-color-elysian-1000: #e7fbed;
+
+    /* Cycladic Dark Scale (reversed) */
+    --maia-ui-color-cycladic-50:  #6841cf;
+    --maia-ui-color-cycladic-100: #7455d3;
+    --maia-ui-color-cycladic-200: #8069d7;
+    --maia-ui-color-cycladic-300: #8d7ddb;
+    --maia-ui-color-cycladic-400: #9991df;
+    --maia-ui-color-cycladic-500: #a6a5e3;
+    --maia-ui-color-cycladic-600: #b2bbe7;
+    --maia-ui-color-cycladic-700: #bfd1eb;
+    --maia-ui-color-cycladic-800: #cce7ef;
+    --maia-ui-color-cycladic-900: #d9edf3;
+    --maia-ui-color-cycladic-950: #e6f3f7;
+    --maia-ui-color-cycladic-1000: #f2f9fb;
+
+    /* Spartan Dark Scale (reversed) */
+    --maia-ui-color-spartan-50:  #53301a;
+    --maia-ui-color-spartan-100: #694830;
+    --maia-ui-color-spartan-200: #7e5e46;
+    --maia-ui-color-spartan-300: #94745c;
+    --maia-ui-color-spartan-400: #aa8b72;
+    --maia-ui-color-spartan-500: #c0a088;
+    --maia-ui-color-spartan-600: #d6b39e;
+    --maia-ui-color-spartan-700: #ddbfaf;
+    --maia-ui-color-spartan-800: #e4cbc0;
+    --maia-ui-color-spartan-900: #ebd8cd;
+    --maia-ui-color-spartan-950: #f2e5de;
+    --maia-ui-color-spartan-1000: #f8f2ef;
+
+    /* Mycenaean Dark Scale (reversed) */
+    --maia-ui-color-mycenaean-50:  #60561b;
+    --maia-ui-color-mycenaean-100: #796b2a;
+    --maia-ui-color-mycenaean-200: #917f39;
+    --maia-ui-color-mycenaean-300: #aa9448;
+    --maia-ui-color-mycenaean-400: #c3aa57;
+    --maia-ui-color-mycenaean-500: #dcbf66;
+    --maia-ui-color-mycenaean-600: #f5d375;
+    --maia-ui-color-mycenaean-700: #f7da8c;
+    --maia-ui-color-mycenaean-800: #f9e2a3;
+    --maia-ui-color-mycenaean-900: #fbe9ba;
+    --maia-ui-color-mycenaean-950: #fdf1d1;
+    --maia-ui-color-mycenaean-1000: #fef8e8;
+
+    /* Athena Dark Scale (reversed) */
+    --maia-ui-color-athena-50:  #0a311e;
+    --maia-ui-color-athena-100: #0f3f2a;
+    --maia-ui-color-athena-200: #144e36;
+    --maia-ui-color-athena-300: #296960;
+    --maia-ui-color-athena-400: #3d838a;
+    --maia-ui-color-athena-500: #519eb4;
+    --maia-ui-color-athena-600: #65b9cd;
+    --maia-ui-color-athena-700: #84c7d7;
+    --maia-ui-color-athena-800: #a3d5e1;
+    --maia-ui-color-athena-900: #c2e3eb;
+    --maia-ui-color-athena-950: #e1f1f5;
+    --maia-ui-color-athena-1000: #f0f8fa;
+
+    /* Dionysian Dark Scale (reversed) */
+    --maia-ui-color-dionysian-50:  #441863;
+    --maia-ui-color-dionysian-100: #5a2c72;
+    --maia-ui-color-dionysian-200: #703881;
+    --maia-ui-color-dionysian-300: #903a90;
+    --maia-ui-color-dionysian-400: #b14d9f;
+    --maia-ui-color-dionysian-500: #d25fae;
+    --maia-ui-color-dionysian-600: #f371bd;
+    --maia-ui-color-dionysian-700: #f589c8;
+    --maia-ui-color-dionysian-800: #f7a0d3;
+    --maia-ui-color-dionysian-900: #f9b8de;
+    --maia-ui-color-dionysian-950: #fbd0e9;
+    --maia-ui-color-dionysian-1000: #fde8f4;
+
+    /* Hermes Dark Scale (reversed) */
+    --maia-ui-color-hermes-50:  #664d0c;
+    --maia-ui-color-hermes-100: #805816;
+    --maia-ui-color-hermes-200: #99701f;
+    --maia-ui-color-hermes-300: #b38a29;
+    --maia-ui-color-hermes-400: #cca133;
+    --maia-ui-color-hermes-500: #e6ba3d;
+    --maia-ui-color-hermes-600: #ffd247;
+    --maia-ui-color-hermes-700: #ffda66;
+    --maia-ui-color-hermes-800: #ffe085;
+    --maia-ui-color-hermes-900: #ffe8a3;
+    --maia-ui-color-hermes-950: #fff0c2;
+    --maia-ui-color-hermes-1000: #fff7e0;
+}

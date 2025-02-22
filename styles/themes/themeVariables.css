@@ -1,0 +1,228 @@
+:root {
+    /* ==========================================================================
+       Color Palette
+       ========================================================================== */
+    --color-primary: #007bff; /* Main brand color */
+    --color-secondary: #6c757d; /* Secondary brand color */
+    --color-accent: #ffc107; /* Accent color */
+    --color-success: #28a745;
+    --color-warning: #ffc107;
+    --color-error: #dc3545;
+    --color-info: #17a2b8;
+
+    /* ==========================================================================
+       Text Colors
+       ========================================================================== */
+    --text-color-primary: #212529; /* Main text color */
+    --text-color-secondary: #6c757d; /* Secondary text color (e.g., for muted text) */
+    --text-color-link: #007bff;
+    --text-color-link-hover: #0056b3;
+    --text-color-white: #ffffff;
+    --text-color-disabled: #6c757d;
+
+    /* ==========================================================================
+       Background Colors
+       ========================================================================== */
+    --bg-color-primary: #ffffff; /* Main background color */
+    --bg-color-secondary: #f8f9fa; /* Secondary background color (e.g., for sections) */
+    --bg-color-accent: #f0f8ff; /* Background for highlighted areas */
+    --bg-color-hover: #e9ecef; /* Background color on hover */
+    --bg-color-disabled: #e9ecef;
+
+    /* ==========================================================================
+       Border Colors
+       ========================================================================== */
+    --border-color-primary: #ced4da; /* Default border color */
+    --border-color-secondary: #adb5bd;
+    --border-color-accent: #ffc107;
+    --border-color-focus: #80bdff; /* Border color when an element is focused */
+
+    /* ==========================================================================
+       Typography
+       ========================================================================== */
+    --font-family-base: sans-serif; /* Base font family */
+    --font-family-heading: sans-serif; /* Font family for headings */
+    --font-size-base: 16px; /* Base font size */
+    --font-size-small: 0.875rem;
+    --font-size-large: 1.25rem;
+    --font-weight-base: 400;
+    --font-weight-bold: 700;
+    --line-height-base: 1.5;
+
+    /* ==========================================================================
+       Spacing & Layout
+       ========================================================================== */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 1.5rem;
+    --spacing-extra-large: 3rem;
+
+    /* ==========================================================================
+       Border Radius
+       ========================================================================== */
+    --border-radius-small: 0.2rem;
+    --border-radius-medium: 0.25rem;
+    --border-radius-large: 0.3rem;
+
+    /* ==========================================================================
+       Box Shadow
+       ========================================================================== */
+    --box-shadow-default: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --box-shadow-hover: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+    /* ==========================================================================
+       Buttons
+       ========================================================================== */
+    --button-primary-bg: #007bff;
+    --button-primary-text: #ffffff;
+    --button-primary-hover-bg: #0056b3;
+    --button-primary-hover-text: #ffffff;
+    --button-secondary-bg: #6c757d;
+    --button-secondary-text: #ffffff;
+    --button-secondary-hover-bg: #545b62;
+    --button-secondary-hover-text: #ffffff;
+    --button-padding-y: 0.5rem;
+    --button-padding-x: 1rem;
+    --button-font-size: 1rem;
+
+    /* ==========================================================================
+       Forms
+       ========================================================================== */
+    --input-bg: #ffffff;
+    --input-text-color: #495057;
+    --input-border-color: #ced4da;
+    --input-border-radius: 0.25rem;
+    --input-focus-border-color: #80bdff;
+    --input-focus-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+
+    /* ==========================================================================
+       Cards
+       ========================================================================== */
+    --card-bg: #ffffff;
+    --card-border-color: rgba(0, 0, 0, 0.125);
+    --card-border-radius: 0.25rem;
+    --card-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --card-header-bg: #f8f9fa;
+    --card-header-color: #212529;
+
+    /* ==========================================================================
+       Modals
+       ========================================================================== */
+    --modal-bg: #ffffff;
+    --modal-border-color: rgba(0, 0, 0, 0.2);
+    --modal-border-radius: 0.3rem;
+    --modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    --modal-header-bg: #f8f9fa;
+    --modal-header-color: #212529;
+
+    /* ==========================================================================
+       Navigation
+       ========================================================================== */
+    --nav-bg: #f8f9fa;
+    --nav-link-color: #212529;
+    --nav-link-hover-color: #0056b3;
+    --nav-link-active-color: #007bff;
+
+    /* ==========================================================================
+       Other Components
+       ========================================================================== */
+    --alert-success-bg: #d4edda;
+    --alert-success-text: #155724;
+    --alert-error-bg: #f8d7da;
+    --alert-error-text: #721c24;
+}
+
+.dark-theme {
+    /* ==========================================================================
+       Color Palette
+       ========================================================================== */
+    --color-primary: #2962ff; /* A darker shade for primary */
+    --color-secondary: #90a4ae; /* A lighter shade for secondary */
+    --color-accent: #ffca28; /* A slightly different accent */
+    --color-success: #4caf50;
+    --color-warning: #ffc107;
+    --color-error: #f44336;
+    --color-info: #29b6f6;
+
+    /* ==========================================================================
+       Text Colors
+       ========================================================================== */
+    --text-color-primary: #ffffff; /* Main text color */
+    --text-color-secondary: #adb5bd; /* Secondary text color */
+    --text-color-link: #42a5f5;
+    --text-color-link-hover: #64b5f6;
+    --text-color-white: #000000;
+    --text-color-disabled: #6c757d;
+
+    /* ==========================================================================
+       Background Colors
+       ========================================================================== */
+    --bg-color-primary: #121212; /* Main background color */
+    --bg-color-secondary: #212121; /* Secondary background color */
+    --bg-color-accent: #37474f; /* Background for highlighted areas */
+    --bg-color-hover: #424242; /* Background color on hover */
+    --bg-color-disabled: #616161;
+
+    /* ==========================================================================
+       Border Colors
+       ========================================================================== */
+    --border-color-primary: #373737; /* Default border color */
+    --border-color-secondary: #424242;
+    --border-color-accent: #ffca28;
+    --border-color-focus: #64b5f6; /* Border color when an element is focused */
+
+    /* ==========================================================================
+       Buttons
+       ========================================================================== */
+    --button-primary-bg: #2962ff;
+    --button-primary-text: #ffffff;
+    --button-primary-hover-bg: #0d47a1;
+    --button-primary-hover-text: #ffffff;
+    --button-secondary-bg: #546e7a;
+    --button-secondary-text: #ffffff;
+    --button-secondary-hover-bg: #37474f;
+    --button-secondary-hover-text: #ffffff;
+
+    /* ==========================================================================
+       Forms
+       ========================================================================== */
+    --input-bg: #333333;
+    --input-text-color: #ffffff;
+    --input-border-color: #555555;
+    --input-focus-border-color: #64b5f6;
+    --input-focus-box-shadow: 0 0 0 0.2rem rgba(100, 181, 246, 0.25);
+
+    /* ==========================================================================
+       Cards
+       ========================================================================== */
+    --card-bg: #333333;
+    --card-border-color: #424242;
+    --card-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+    --card-header-bg: #424242;
+    --card-header-color: #ffffff;
+
+    /* ==========================================================================
+       Modals
+       ========================================================================== */
+    --modal-bg: #333333;
+    --modal-border-color: #424242;
+    --modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.75);
+    --modal-header-bg: #424242;
+    --modal-header-color: #ffffff;
+
+    /* ==========================================================================
+       Navigation
+       ========================================================================== */
+    --nav-bg: #333333;
+    --nav-link-color: #ffffff;
+    --nav-link-hover-color: #64b5f6;
+    --nav-link-active-color: #42a5f5;
+
+    /* ==========================================================================
+       Other Components
+       ========================================================================== */
+    --alert-success-bg: #388e3c;
+    --alert-success-text: #ffffff;
+    --alert-error-bg: #d32f2f;
+    --alert-error-text: #ffffff;
+}
