@@ -1,10 +1,10 @@
 import {Meta, StoryFn} from "@storybook/react";
-import type {GridProps} from "../Grid";
-import Grid from "../Grid";
+import type {GridProps} from "./Grid.tsx";
+import Grid from "./Grid.tsx";
 
 
 export default {
-    title: "Components/Grid",
+    title: "Layout/Grid",
     component: Grid,
     tags: ["autodocs"],
     argTypes: {

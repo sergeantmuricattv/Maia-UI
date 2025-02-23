@@ -1,1 +1,1 @@
-export {default as Card} from './Card.tsx';
+export * from './Card.tsx';

@@ -1,2 +1,4 @@
-export * from "./ui/Card";
-export * from "./layout/Grid";
+export * from "./ui";
+export * from "./layout";
+export * from "./typography";
+

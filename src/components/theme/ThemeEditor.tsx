@@ -1,8 +1,7 @@
 import {Dispatch, PropsWithChildren, SetStateAction, useEffect, useState} from 'react';
 import {Button} from '../ui/Button/Button.tsx';
-import Separator from '../ui/Separator/Separator.tsx';
-import Heading from '../ui/Heading/Heading.tsx';
-import Text from '../ui/Text/Text.tsx';
+import {Separator} from '../ui/Separator/Separator.tsx';
+import {Text, Heading} from '../typography';
 import colors from '../../colors.ts';
 
 /**

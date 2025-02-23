@@ -1,6 +1,6 @@
 // hooks/useScreenSize.ts
 import {useEffect, useState} from "react";
-import {ScreenSize, screenSizeManager} from "../utils/screenSize";
+import {ScreenSize, screenSizeManager} from "../utils/screenSize.ts";
 
 export const useScreenSize = (): ScreenSize => {
     const [screenSize, setScreenSize] = useState(screenSizeManager.getCurrentSize());

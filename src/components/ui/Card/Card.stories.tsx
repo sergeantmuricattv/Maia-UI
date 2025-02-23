@@ -1,34 +1,88 @@
-import { Meta, StoryFn } from "@storybook/react";
-import Card, { CardProps } from "./Card.tsx";
+import type { Meta, StoryObj } from '@storybook/react';
+import {
+    Card,
+    CardHeader,
+    CardFooter,
+    CardTitle,
+    CardDescription,
+    CardContent,
+} from './Card';
+import { Button } from '../Button/Button';
 
-export default {
-    title: "Components/Card",
+const meta = {
+    title: 'Components/Card',
     component: Card,
-    argTypes: {
-        title: { control: "text" },
-        className: { control: "text" },
+    parameters: {
+        layout: 'centered',
     },
-} as Meta<CardProps>;
+    tags: ['autodocs'],
+} satisfies Meta<typeof Card>;
 
-const Template: StoryFn<CardProps> = (args: CardProps) => <Card {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-Default.args = {
-    title: "Card Title",
-    children: "This is a simple card component.",
+export const Default: Story = {
+    render: () => (
+        <Card className="w-[350px]">
+            <CardHeader>
+                <CardTitle subtitle="Premium Plan">Upgrade Your Account</CardTitle>
+                <CardDescription>
+                    Get access to all premium features and support.
+                </CardDescription>
+            </CardHeader>
+            <CardContent>
+                <div className="space-y-2">
+                    <p>✓ Unlimited projects</p>
+                    <p>✓ Advanced analytics</p>
+                    <p>✓ Priority support</p>
+                    <p>✓ Custom domain</p>
+                </div>
+            </CardContent>
+            <CardFooter divider>
+                <Button className="w-full">Upgrade Now</Button>
+            </CardFooter>
+        </Card>
+    ),
 };
 
-export const WithContent = Template.bind({});
-WithContent.args = {
-    title: "Card with Content",
-    children: (
-        <div>
-            <p>This card includes more detailed content.</p>
-            <ul className="list-disc pl-5">
-                <li>Item one</li>
-                <li>Item two</li>
-                <li>Item three</li>
-            </ul>
-        </div>
+export const Interactive: Story = {
+    render: () => (
+        <Card variant="interactive" className="w-[350px]">
+            <CardHeader>
+                <CardTitle>Interactive Card</CardTitle>
+                <CardDescription>Hover to see the effect</CardDescription>
+            </CardHeader>
+            <CardContent>
+                <p>This card has hover animations and effects.</p>
+            </CardContent>
+        </Card>
+    ),
+};
+
+export const Loading: Story = {
+    render: () => (
+        <Card loading className="w-[350px]">
+            <CardHeader>
+                <CardTitle>Loading State</CardTitle>
+                <CardDescription>This card is in a loading state</CardDescription>
+            </CardHeader>
+            <CardContent>
+                <p>Content is loading...</p>
+            </CardContent>
+        </Card>
+    ),
+};
+
+export const Elevated: Story = {
+    render: () => (
+        <Card variant="elevated" size="sm">
+            <CardHeader>
+                <CardTitle>Elevated Card</CardTitle>
+                <CardDescription>With enhanced shadow</CardDescription>
+            </CardHeader>
+            <CardContent>
+                <p>This card has a more prominent shadow.</p>
+            </CardContent>
+        </Card>
     ),
 };
