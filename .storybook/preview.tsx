@@ -24,11 +24,12 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => (
-        <div style={{ padding: '20px' }}>
-          {/* Add some padding for better viewing */}
+        // Add a div with some Tailwind classes to test if they're working
+        <div className="p-4 bg-gray-100 dark:bg-gray-800">
           <Story />
         </div>
     ),
+
     withThemeByClassName({
       themes: {
         light: 'light',

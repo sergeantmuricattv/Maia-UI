@@ -16,7 +16,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: 'src/index.ts',
-            name: 'maia-ui',
+            name: 'maia-Surfaces',
             fileName: (format) => `maia-ui.${format}.js`,
             formats: ['es', 'cjs', 'umd'],
         },

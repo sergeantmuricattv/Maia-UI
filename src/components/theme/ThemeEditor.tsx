@@ -1,6 +1,6 @@
 import {Dispatch, PropsWithChildren, SetStateAction, useEffect, useState} from 'react';
-import {Button} from '../ui/Button/Button.tsx';
-import {Separator} from '../ui/Separator/Separator.tsx';
+import {Button} from '../Inputs';
+import {Separator} from '../Display';
 import {Text, Heading} from '../typography';
 import colors from '../../colors.ts';
 

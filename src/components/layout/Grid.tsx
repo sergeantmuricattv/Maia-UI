@@ -1,8 +1,8 @@
 import React, {ElementType} from "react";
 import clsx from "clsx";
-import { useScreenSize } from "./hooks/useScreenSize";
-import { ScreenSize } from "./utils/screenSize";
-import { getResponsiveValue } from "./hooks/getResponsiveValue";
+import { useScreenSize } from "../../hooks";
+import { ScreenSize } from "../../utils";
+import { getResponsiveValue } from "../../hooks";
 
 type GridDirection = "row" | "row-reverse" | "column" | "column-reverse";
 type GridWrap = "nowrap" | "wrap" | "wrap-reverse";
@@ -229,4 +229,4 @@ const Grid = React.forwardRef<HTMLElement, GridProps>(({
 
 Grid.displayName = 'Grid';
 
-export default Grid;
+export {Grid};

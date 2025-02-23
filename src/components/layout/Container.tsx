@@ -1,8 +1,8 @@
 import React from "react";
 import clsx from "clsx";
-import {useScreenSize} from "./hooks/useScreenSize";
-import {ScreenSize} from "./utils/screenSize";
-import {getResponsiveValue} from "./hooks/getResponsiveValue";
+import {useScreenSize} from "../../hooks";
+import {ScreenSize} from "../../utils";
+import {getResponsiveValue} from "../../hooks";
 
 export interface ContainerProps {
     as?: "div" | "section" | "main",

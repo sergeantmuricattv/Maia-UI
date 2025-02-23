@@ -12,7 +12,7 @@ import banner2 from 'rollup-plugin-banner2';
 
 // Function to dynamically get all component directories in the 'src/components' folder
 function getComponentDirectories() {
-    const componentsPath = 'src/components/ui';
+    const componentsPath = 'src/components/Surfaces';
     return fs.readdirSync(componentsPath)
         .filter((file) => fs.statSync(path.join(componentsPath, file)).isDirectory());
 }
