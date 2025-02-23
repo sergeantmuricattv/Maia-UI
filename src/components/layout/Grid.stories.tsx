@@ -72,11 +72,11 @@ export const CompleteGrid: StoryFn<GridProps> = () => (
             </Grid>
 
             {/* Nested Grid demonstration */}
-            <Grid container item size={{xs: 20, md: 10}} className="bg-gray-100 p-4 mt-4" spacing="10px">
-                <Grid item size={20} offset={2} className="bg-purple-200 p-4">
+            <Grid container item size={{xs: 20, md: 10}} offset={[5,0]} className="bg-gray-100 p-4 mt-4" spacing="10px">
+                <Grid item size={20} className="bg-purple-200 p-4">
                     Nested Item 1
                 </Grid>
-                <Grid item size={20} offset={2} className="bg-purple-300 p-4">
+                <Grid item size={20} className="bg-purple-300 p-4">
                     Nested Item 2
                 </Grid>
             </Grid>

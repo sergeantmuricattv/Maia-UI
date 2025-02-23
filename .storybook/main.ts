@@ -1,9 +1,18 @@
-import type { StorybookConfig } from "@storybook/react-vite";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
 
-const configPromise: Promise<StorybookConfig> = (async () => {
+const configPromise: Promise<{
+    stories: string[];
+    addons: string[];
+    core: { builder: string };
+    framework: { name: string; options: {} };
+    features: { storyStoreV7: boolean; interactionsDebugger: boolean; buildStoriesJson: boolean };
+    docs: { autodocs: boolean }
+}> = (async () => {
     return {
-        stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+        stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
         addons: [
             "@storybook/addon-essentials",
             "@storybook/addon-interactions",
@@ -17,6 +26,14 @@ const configPromise: Promise<StorybookConfig> = (async () => {
         framework: {
             name: "@storybook/react-vite",
             options: {},
+        },
+        features: {
+            "storyStoreV7": true,
+            "interactionsDebugger": true,
+            "buildStoriesJson": true
+        },
+        docs: {
+            autodocs: true
         },
     };
 })();

@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Container from './Container';
+import {Container} from './Container';
 import { Box } from './Box';
 import { Stack } from './Stack';
 import { Flex } from './Flex';
 import { Section } from './Section';
 import { AspectRatio } from './AspectRatio';
-import Grid from "./Grid";
 
 const meta = {
     title: 'Layout',
@@ -52,13 +51,13 @@ export const Boxes: StoryObj = {
 export const Stacks: StoryObj = {
     render: () => (
         <div className="space-y-4">
-            <Stack spacing="md" className="bg-muted p-4">
+            <Stack spacing="md" className="bg-muted border border-gray-300 p-6">
                 <div className="bg-primary/20 p-4">Item 1</div>
                 <div className="bg-primary/20 p-4">Item 2</div>
                 <div className="bg-primary/20 p-4">Item 3</div>
             </Stack>
 
-            <Stack direction="row" spacing="md" className="bg-muted p-4">
+            <Stack direction="row" spacing="md" className="bg-muted border border-gray-300 p-6">
                 <div className="bg-primary/20 p-4">Item 1</div>
                 <div className="bg-primary/20 p-4">Item 2</div>
                 <div className="bg-primary/20 p-4">Item 3</div>
@@ -75,7 +74,7 @@ export const FlexLayouts: StoryObj = {
             justify="between"
             align="center"
             gap="md"
-            className="bg-muted p-4"
+            className="bg-muted border border-gray-300 p-6"
         >
             <div className="bg-primary/20 p-4">Flex Item 1</div>
             <div className="bg-primary/20 p-4">Flex Item 2</div>
@@ -86,7 +85,9 @@ export const FlexLayouts: StoryObj = {
 
 export const Sections: StoryObj = {
     render: () => (
-        <div className="space-y-4">
+        <div
+            className="bg-muted border border-gray-300 p-6 space-y-4"
+        >
             <Section background="default" spacing="lg">
                 Default Section
             </Section>
