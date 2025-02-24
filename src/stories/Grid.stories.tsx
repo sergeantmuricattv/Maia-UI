@@ -7,27 +7,6 @@ export default {
     title: "Layout/Grid",
     component: Grid,
     tags: ["autodocs"],
-    argTypes: {
-        as: {
-            control: {type: "select"},
-            options: ["div", "span"],
-        },
-        container: {control: "boolean"},
-        item: {control: "boolean"},
-        spacing: {control: "text"},
-        rowSpacing: {control: "number"},
-        columnSpacing: {control: "number"},
-        direction: {
-            control: {type: "select"},
-            options: ["row", "row-reverse", "column", "column-reverse"],
-        },
-        size: {control: "number"},
-        wrap: {
-            control: {type: "select"},
-            options: ["nowrap", "wrap", "wrap-reverse"],
-        },
-        offset: {control: "text"},
-    },
 } satisfies Meta<typeof Grid>;
 
 export const CompleteGrid: StoryFn<GridProps> = () => (

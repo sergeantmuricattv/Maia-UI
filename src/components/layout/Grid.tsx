@@ -1,8 +1,7 @@
 import React, {ElementType} from "react";
 import clsx from "clsx";
-import { useScreenSize } from "../../hooks";
-import { ScreenSize } from "../../utils";
-import { getResponsiveValue } from "../../hooks";
+import {getResponsiveValue, useScreenSize} from "../../hooks";
+import {ScreenSize} from "../../utils";
 
 type GridDirection = "row" | "row-reverse" | "column" | "column-reverse";
 type GridWrap = "nowrap" | "wrap" | "wrap-reverse";
@@ -11,75 +10,48 @@ type GridAlignment = "start" | "center" | "end" | "stretch" | "baseline";
 type GridJustification = "start" | "center" | "end" | "between" | "around" | "evenly";
 type GridOrder = number | "first" | "last";
 
-export interface GridProps extends Omit<React.HTMLAttributes<HTMLElement>, 'hidden'> {
+// Base props shared by all grid types
+interface BaseGridProps extends Omit<React.HTMLAttributes<HTMLElement>, 'hidden'> {
     as?: ElementType;
     className?: string;
     children: React.ReactNode;
-    // Spacing
-    columnSpacing?: number | string | Partial<Record<ScreenSize, number | string>>;
-    rowSpacing?: number | string | Partial<Record<ScreenSize, number | string>>;
-    spacing?: number | string | Partial<Record<ScreenSize, number | string>>;
-    // Layout
-    container?: boolean;
-    item?: boolean;
-    direction?: GridDirection | Partial<Record<ScreenSize, GridDirection>>;
-    wrap?: GridWrap | Partial<Record<ScreenSize, GridWrap>>;
-    // Alignment
-    alignItems?: GridAlignment | Partial<Record<ScreenSize, GridAlignment>>;
-    alignContent?: GridAlignment | Partial<Record<ScreenSize, GridAlignment>>;
-    alignSelf?: GridAlignment | Partial<Record<ScreenSize, GridAlignment>>;
-    justifyContent?: GridJustification | Partial<Record<ScreenSize, GridJustification>>;
-    justifyItems?: GridJustification | Partial<Record<ScreenSize, GridJustification>>;
-    justifySelf?: GridJustification | Partial<Record<ScreenSize, GridJustification>>;
-    // Sizing and Positioning
-    size?: GridSize | Partial<Record<ScreenSize, GridSize>>;
-    offset?: number | [number, number] | Partial<Record<ScreenSize, number | [number, number]>>;
-    order?: GridOrder | Partial<Record<ScreenSize, GridOrder>>;
-    // Additional features
     hidden?: boolean | Partial<Record<ScreenSize, boolean>>;
     zIndex?: number;
     overflow?: "visible" | "hidden" | "scroll" | "auto";
 }
 
-const calculateGridSize = (size: GridSize): React.CSSProperties => {
-    if (size === "grow") {
-        return {
-            flexGrow: 1,
-            flexShrink: 1,
-            flexBasis: "0%",
-        };
-    }
-    if (size === "shrink") {
-        return {
-            flexGrow: 0,
-            flexShrink: 1,
-            flexBasis: "auto",
-        };
-    }
-    if (size === "none") {
-        return {
-            flexGrow: 0,
-            flexShrink: 0,
-            flexBasis: "auto",
-        };
-    }
-    if (size === "auto") {
-        return {
-            flexBasis: "auto",
-            flexGrow: 0,
-            flexShrink: 1,
-            width: "auto",
-        };
-    }
-    const widthValue = `${(Number(size) / 20) * 100}%`;
-    return {
-        flexBasis: widthValue,
-        maxWidth: widthValue,
-        width: widthValue,
-        flexGrow: 0,
-        flexShrink: 1,
-    };
-};
+// Container-specific props
+interface GridContainerProps extends BaseGridProps {
+    container: true;
+    item?: never;
+    nested?: never;
+    // Container-only props
+    columnSpacing?: number | string  | undefined | Partial<Record<ScreenSize, number | string | undefined>>;
+    rowSpacing?: number | string  | undefined | Partial<Record<ScreenSize, number | string | undefined>>;
+    spacing?: number | string | undefined | Partial<Record<ScreenSize, number | string | undefined>>;
+    direction?: GridDirection;
+    wrap?: GridWrap | Partial<Record<ScreenSize, GridWrap>>;
+    alignItems?: GridAlignment | Partial<Record<ScreenSize, GridAlignment>>;
+    alignContent?: GridAlignment | Partial<Record<ScreenSize, GridAlignment>>;
+    justifyContent?: GridJustification | Partial<Record<ScreenSize, GridJustification>>;
+    justifyItems?: GridJustification | Partial<Record<ScreenSize, GridJustification>>;
+}
+
+// Item-specific props
+interface GridItemProps extends BaseGridProps {
+    container?: never;
+    item: true;
+    nested?: boolean;
+    // Item-only props
+    size?: GridSize | Partial<Record<ScreenSize, GridSize>>;
+    alignSelf?: GridAlignment | Partial<Record<ScreenSize, GridAlignment>>;
+    justifySelf?: GridJustification | Partial<Record<ScreenSize, GridJustification>>;
+    offset?: number | [number, number] | Partial<Record<ScreenSize, number | [number, number]>>;
+    order?: GridOrder | Partial<Record<ScreenSize, GridOrder>>;
+}
+
+export type GridProps = GridContainerProps | GridItemProps;
+
 
 const calculateOrder = (order: GridOrder): number => {
     if (order === "first") return -1;
@@ -87,120 +59,107 @@ const calculateOrder = (order: GridOrder): number => {
     return order;
 };
 
-const Grid = React.forwardRef<HTMLElement, GridProps>(({
-                                                           as: Component = "div",
-                                                           className,
-                                                           children,
-                                                           // Spacing props
-                                                           columnSpacing,
-                                                           rowSpacing,
-                                                           spacing = 0,
-                                                           // Layout props
-                                                           container = false,
-                                                           item = false,
-                                                           direction = { xs: "column", md: "row" },
-                                                           wrap = "wrap",
-                                                           // Alignment props
-                                                           alignItems,
-                                                           alignContent,
-                                                           alignSelf,
-                                                           justifyContent,
-                                                           justifyItems,
-                                                           justifySelf,
-                                                           // Sizing and Positioning props
-                                                           size,
-                                                           offset = 0,
-                                                           order,
-                                                           // Additional features
-                                                           hidden,
-                                                           zIndex,
-                                                           overflow,
-                                                           ...rest
-                                                       }, ref) => {
+const GridContext = React.createContext<{
+    spacing: number | string | undefined;
+    rowSpacing?: number | string | undefined;
+    columnSpacing?: number | string | undefined;
+}>({ spacing: 0, rowSpacing: 0, columnSpacing: 0});
+
+const Grid = React.forwardRef<HTMLElement, GridProps>((props, ref) => {
     const screenSize = useScreenSize();
+    const parentContext = React.useContext(GridContext);
 
-    // Get responsive values
-    const currentDirection = getResponsiveValue(direction, screenSize, "row");
-    const currentWrap = getResponsiveValue(wrap, screenSize, "wrap");
-    const currentSize = getResponsiveValue(size, screenSize, undefined);
-    const currentOffset = getResponsiveValue(offset, screenSize, undefined);
-    const currentOrder = getResponsiveValue(order, screenSize, undefined);
-    const isHidden = getResponsiveValue(hidden, screenSize, false);
-    const currentAlignItems = getResponsiveValue(alignItems, screenSize, undefined);
-    const currentAlignContent = getResponsiveValue(alignContent, screenSize, undefined);
-    const currentAlignSelf = getResponsiveValue(alignSelf, screenSize, undefined);
-    const currentJustifyContent = getResponsiveValue(justifyContent, screenSize, undefined);
-    const currentJustifyItems = getResponsiveValue(justifyItems, screenSize, undefined);
-    const currentJustifySelf = getResponsiveValue(justifySelf, screenSize, undefined);
-
-    const inlineStyles: React.CSSProperties = {
-        boxSizing: "border-box",
-        display: isHidden ? "none" : container ? "flex" : undefined,
+    const {
+        as: Component = "div",
+        className,
+        children,
+        hidden,
         zIndex,
         overflow,
-    };
+        ...rest
+    } = props;
 
-    // Container styles
-    if (container) {
-        Object.assign(inlineStyles, {
-            flexDirection: currentDirection,
-            flexWrap: currentWrap,
-            alignItems: currentAlignItems,
-            alignContent: currentAlignContent,
-            justifyContent: currentJustifyContent?.replace("between", "space-between")
-                .replace("around", "space-around")
-                .replace("evenly", "space-evenly"),
-            justifyItems: currentJustifyItems,
-        });
+    const isContainer = 'container' in props && props.container;
+    const isItem = 'item' in props && props.item;
 
-        // Handle spacing
-        const spacingValue = getResponsiveValue(spacing, screenSize, undefined);
-        const colSpacing = getResponsiveValue(columnSpacing, screenSize, undefined);
-        const rowSpacingValue = getResponsiveValue(rowSpacing, screenSize, undefined);
+    // Get responsive values
+    const isHidden = getResponsiveValue(hidden, screenSize, false);
 
-        if (spacingValue !== undefined) {
-            inlineStyles.gap = spacingValue;
-        }
-        if (colSpacing !== undefined) {
-            inlineStyles.columnGap = colSpacing;
-        }
-        if (rowSpacingValue !== undefined) {
-            inlineStyles.rowGap = rowSpacingValue;
-        }
+    if (isContainer) {
+        const {
+            columnSpacing,
+            rowSpacing,
+            spacing = 0,
+            direction = "row",
+            wrap = "wrap",
+            alignItems,
+            alignContent,
+            justifyContent,
+            justifyItems,
+        } = rest as GridContainerProps;
 
-        // Auto-layout optimization
-        const childrenArray = React.Children.toArray(children);
-        let totalSize = 0;
-        let hasSizes = false;
+        const currentSpacing = getResponsiveValue(spacing, screenSize, 0);
+        const currentColSpacing = getResponsiveValue(columnSpacing, screenSize, currentSpacing);
+        const currentRowSpacing = getResponsiveValue(rowSpacing, screenSize, currentSpacing);
 
-        childrenArray.forEach(child => {
-            if (React.isValidElement(child)) {
-                const childProps = child.props as GridProps;
-                if (childProps.item && !childProps.container && typeof childProps.size === "number") {
-                    totalSize += childProps.size;
-                    hasSizes = true;
-                }
-            }
-        });
+        const style: React.CSSProperties = {
+            display: isHidden ? "none" : "flex",
+            flexDirection: direction,
+            flexWrap: typeof wrap === "object"
+                ? (getResponsiveValue(wrap, screenSize, "nowrap") as GridWrap)
+                : wrap,
+            width: "100%",
+            maxWidth: "100%",
+            boxSizing: "border-box",
+            gap: `${currentSpacing}px`,
+            columnGap: currentColSpacing !== undefined ? `${currentColSpacing}px` : undefined,
+            rowGap: currentRowSpacing !== undefined ? `${currentRowSpacing}px` : undefined,
+            alignItems: getResponsiveValue(alignItems, screenSize, undefined),
+            alignContent: getResponsiveValue(alignContent, screenSize, undefined),
+            justifyContent: getResponsiveValue(justifyContent, screenSize, "space-between"),
+            justifyItems: getResponsiveValue(justifyItems, screenSize, undefined),
+            ...(zIndex !== undefined && { zIndex }),
+            ...(overflow && { overflow }),
+        };
 
-        if (hasSizes && totalSize % 20 === 0) {
-            inlineStyles.flexWrap = "nowrap";
-            inlineStyles.flexDirection = "row";
-        }
+        return (
+            <GridContext.Provider value={{ spacing: currentSpacing, rowSpacing: currentRowSpacing, columnSpacing: currentColSpacing}}>
+                <Component
+                    className={clsx(className, "grid-container")}
+                    style={style}
+                    ref={ref}
+                >
+                    {children}
+                </Component>
+            </GridContext.Provider>
+        );
     }
 
-    // Item styles
-    if (item) {
-        if (currentSize !== undefined) {
-            Object.assign(inlineStyles, calculateGridSize(currentSize));
-        }
+    if (isItem) {
+        const {
+            nested,
+            size,
+            alignSelf,
+            justifySelf,
+            offset = 0,
+            order,
+        } = rest as GridItemProps;
 
-        Object.assign(inlineStyles, {
-            alignSelf: currentAlignSelf,
-            justifySelf: currentJustifySelf,
-            order: currentOrder !== undefined ? calculateOrder(currentOrder) : undefined,
+        const currentSize = getResponsiveValue(size, screenSize, undefined);
+        const currentOffset = getResponsiveValue(offset, screenSize, undefined);
+        const currentOrder = getResponsiveValue(order, screenSize, undefined);
+
+        const style: React.CSSProperties = {
+            display: isHidden ? "none" : undefined,
+            boxSizing: "border-box",
             minWidth: 0,
-        });
+            ...(currentSize && calculateGridSize(currentSize, parentContext.spacing? parentContext.spacing : parentContext.rowSpacing? parentContext.rowSpacing : parentContext.columnSpacing)),
+            alignSelf: getResponsiveValue(alignSelf, screenSize, undefined),
+            justifySelf: getResponsiveValue(justifySelf, screenSize, undefined),
+            order: currentOrder !== undefined ? calculateOrder(currentOrder) : undefined,
+            ...(zIndex !== undefined && { zIndex }),
+            ...(overflow && { overflow }),
+        };
 
         // Handle offset
         if (currentOffset !== undefined) {
@@ -211,22 +170,64 @@ const Grid = React.forwardRef<HTMLElement, GridProps>(({
             const clampedX = Math.min(Math.max(Number(xOffset), -10), 10);
             const clampedY = Math.min(Math.max(Number(yOffset), -10), 10);
 
-            inlineStyles.transform = `translate(${clampedX * 10}%, ${clampedY * 10}%)`;
+            style.transform = `translate(${clampedX * 10}%, ${clampedY * 10}%)`;
         }
+
+        return (
+            <Component
+                onClick={() => {console.log(size, offset, order)}}
+                className={clsx(className, {
+                    "grid-item": true,
+                    "nested-item": nested,
+                })}
+                style={style}
+                ref={ref}
+            >
+                {children}
+            </Component>
+        );
     }
 
-    return React.createElement(
-        Component,
-        {
-            ref,
-            style: inlineStyles,
-            className: clsx(className),
-            ...rest
-        },
-        children
-    );
+    return null;
 });
 
-Grid.displayName = 'Grid';
+
+const calculateGridSize = (
+    size: GridSize,
+    containerSpacing: number | string = 0
+): React.CSSProperties => {
+    // Handle non-numeric sizes first
+    if (typeof size !== 'number') {
+        return {
+            flexGrow: size === "grow" ? 1 : 0,
+            maxWidth: size === "grow" ? "100%" : undefined,
+            flexShrink: size !== "none" ? 1 : 0,
+            flexBasis: size === "auto" ? "auto" : "0%",
+            width: size === "auto" ? "auto" : undefined,
+        };
+    }
+
+    const spacingValue = typeof containerSpacing === 'string'
+        ? parseFloat(containerSpacing)
+        : Number(containerSpacing) || 0;
+
+    const spacingReduction = (spacingValue / 10);
+
+
+    const adjustedSize = Math.max(size - spacingReduction, 0);
+
+    const percentage = (adjustedSize / 20) * 100;
+
+    return {
+        flexGrow: 0,
+        flexShrink: 0,
+        flexBasis: `calc(${percentage}% - ${spacingValue}px)`,
+        maxWidth: `calc(${percentage}% - ${spacingValue}px)`,
+        width: `calc(${percentage}% - ${spacingValue}px)`,
+        minWidth: 0,
+    };
+};
+
+Grid.displayName = "Grid";
 
 export {Grid};
