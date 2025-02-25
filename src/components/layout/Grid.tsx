@@ -1,4 +1,4 @@
-import React, {ElementType} from "react";
+import React, {ElementType, useCallback, useContext, useEffect, useMemo, useState} from "react";
 import clsx from "clsx";
 import {getResponsiveValue, useScreenSize} from "../../hooks";
 import {ScreenSize} from "../../utils";
@@ -26,9 +26,7 @@ interface GridContainerProps extends BaseGridProps {
     item?: never;
     nested?: never;
     // Container-only props
-    columnSpacing?: number | string  | undefined | Partial<Record<ScreenSize, number | string | undefined>>;
-    rowSpacing?: number | string  | undefined | Partial<Record<ScreenSize, number | string | undefined>>;
-    spacing?: number | string | undefined | Partial<Record<ScreenSize, number | string | undefined>>;
+    spacing?: number | string | [number, number] | undefined | Partial<Record<ScreenSize, number | string | [number, number] | undefined>>;
     direction?: GridDirection;
     wrap?: GridWrap | Partial<Record<ScreenSize, GridWrap>>;
     alignItems?: GridAlignment | Partial<Record<ScreenSize, GridAlignment>>;
@@ -60,14 +58,23 @@ const calculateOrder = (order: GridOrder): number => {
 };
 
 const GridContext = React.createContext<{
-    spacing: number | string | undefined;
-    rowSpacing?: number | string | undefined;
-    columnSpacing?: number | string | undefined;
-}>({ spacing: 0, rowSpacing: 0, columnSpacing: 0});
+    spacing: number | string | [number, number] | undefined;
+    availableColumns: number;
+    updateAvailableColumns: (used: number) => void;
+}>({
+    spacing: 0,
+    availableColumns: 20,
+    updateAvailableColumns: () => {}
+});
 
 const Grid = React.forwardRef<HTMLElement, GridProps>((props, ref) => {
     const screenSize = useScreenSize();
-    const parentContext = React.useContext(GridContext);
+    const [availableColumns, setAvailableColumns] = useState(20);
+
+    const updateAvailableColumns = useCallback((used: number) => {
+        setAvailableColumns(prev => Math.max(0, prev - used));
+    }, []);
+
 
     const {
         as: Component = "div",
@@ -87,11 +94,7 @@ const Grid = React.forwardRef<HTMLElement, GridProps>((props, ref) => {
 
     if (isContainer) {
         const {
-            columnSpacing,
-            rowSpacing,
             spacing = 0,
-            direction = "row",
-            wrap = "wrap",
             alignItems,
             alignContent,
             justifyContent,
@@ -99,31 +102,48 @@ const Grid = React.forwardRef<HTMLElement, GridProps>((props, ref) => {
         } = rest as GridContainerProps;
 
         const currentSpacing = getResponsiveValue(spacing, screenSize, 0);
-        const currentColSpacing = getResponsiveValue(columnSpacing, screenSize, currentSpacing);
-        const currentRowSpacing = getResponsiveValue(rowSpacing, screenSize, currentSpacing);
+
+        useEffect(() => {
+            setAvailableColumns(20);
+        }, []);
+
+        let margin, gap;
+        if (currentSpacing !== undefined && !Array.isArray(currentSpacing)) {
+            gap = currentSpacing;
+            margin = currentSpacing;
+        } else if (Array.isArray(currentSpacing)) {
+            gap = currentSpacing[0];
+            margin = currentSpacing[1];
+        }
+
 
         const style: React.CSSProperties = {
-            display: isHidden ? "none" : "flex",
-            flexDirection: direction,
-            flexWrap: typeof wrap === "object"
-                ? (getResponsiveValue(wrap, screenSize, "nowrap") as GridWrap)
-                : wrap,
+            display: isHidden ? "none" : "grid",
+            gridTemplateColumns: "repeat(20, minmax(0, 1fr))",
+            gridAutoFlow: "row",
+
+            gridAutoRows: "auto",
             width: "100%",
             maxWidth: "100%",
             boxSizing: "border-box",
-            gap: `${currentSpacing}px`,
-            columnGap: currentColSpacing !== undefined ? `${currentColSpacing}px` : undefined,
-            rowGap: currentRowSpacing !== undefined ? `${currentRowSpacing}px` : undefined,
+            position: "relative",
+
+
+            gap: typeof gap === 'number' ? `${gap}px` : undefined,
+            marginBottom: typeof margin === 'number' ? `${margin}px` : undefined,
+            marginTop: typeof margin === 'number' ? `${margin}px` : undefined,
             alignItems: getResponsiveValue(alignItems, screenSize, undefined),
             alignContent: getResponsiveValue(alignContent, screenSize, undefined),
-            justifyContent: getResponsiveValue(justifyContent, screenSize, "space-between"),
+            justifyContent: getResponsiveValue(justifyContent, screenSize, "center"),
             justifyItems: getResponsiveValue(justifyItems, screenSize, undefined),
             ...(zIndex !== undefined && { zIndex }),
             ...(overflow && { overflow }),
+            ["--grid-gap" as any]: typeof currentSpacing === 'number' ? `${currentSpacing}px` : currentSpacing || '0px',
+
         };
 
         return (
-            <GridContext.Provider value={{ spacing: currentSpacing, rowSpacing: currentRowSpacing, columnSpacing: currentColSpacing}}>
+            <GridContext.Provider value={{ spacing: currentSpacing, availableColumns, updateAvailableColumns }}>
                 <Component
                     className={clsx(className, "grid-container")}
                     style={style}
@@ -136,6 +156,7 @@ const Grid = React.forwardRef<HTMLElement, GridProps>((props, ref) => {
     }
 
     if (isItem) {
+        const context = useContext(GridContext);
         const {
             nested,
             size,
@@ -149,11 +170,33 @@ const Grid = React.forwardRef<HTMLElement, GridProps>((props, ref) => {
         const currentOffset = getResponsiveValue(offset, screenSize, undefined);
         const currentOrder = getResponsiveValue(order, screenSize, undefined);
 
+        const columnsToUse = useMemo(() => {
+            if (typeof currentSize === 'number') {
+                return Math.min(currentSize, 20);
+            }
+            if (currentSize === 'grow') {
+                return context.availableColumns;
+            }
+            if (currentSize === 'auto' || currentSize === 'shrink') {
+                return 1; // Or calculate based on content width
+            }
+            return 1;
+        }, [currentSize, context.availableColumns]);
+
+        useEffect(() => {
+            context.updateAvailableColumns(columnsToUse);
+        }, [columnsToUse]);
+
+
         const style: React.CSSProperties = {
             display: isHidden ? "none" : undefined,
+
+            width: "100%",
+            maxWidth: "100%",
             boxSizing: "border-box",
-            minWidth: 0,
-            ...(currentSize && calculateGridSize(currentSize, parentContext.spacing? parentContext.spacing : parentContext.rowSpacing? parentContext.rowSpacing : parentContext.columnSpacing)),
+            position: "relative",
+
+            ...(currentSize && calculateGridSize(currentSize)),
             alignSelf: getResponsiveValue(alignSelf, screenSize, undefined),
             justifySelf: getResponsiveValue(justifySelf, screenSize, undefined),
             order: currentOrder !== undefined ? calculateOrder(currentOrder) : undefined,
@@ -173,15 +216,23 @@ const Grid = React.forwardRef<HTMLElement, GridProps>((props, ref) => {
             style.transform = `translate(${clampedX * 10}%, ${clampedY * 10}%)`;
         }
 
+
+
+
+
+
+
+
         return (
             <Component
+                ref={ref}
+
                 onClick={() => {console.log(size, offset, order)}}
                 className={clsx(className, {
                     "grid-item": true,
                     "nested-item": nested,
                 })}
                 style={style}
-                ref={ref}
             >
                 {children}
             </Component>
@@ -194,39 +245,60 @@ const Grid = React.forwardRef<HTMLElement, GridProps>((props, ref) => {
 
 const calculateGridSize = (
     size: GridSize,
-    containerSpacing: number | string = 0
 ): React.CSSProperties => {
-    // Handle non-numeric sizes first
-    if (typeof size !== 'number') {
+    if (typeof size === 'number') {
+        if (size === 0) {
+            return {
+                display: 'none',
+                minWidth: 0,
+            };
+        }
+        // Ensure size doesn't exceed 20 columns
+        const columnSpan = Math.min(size, 20);
         return {
-            flexGrow: size === "grow" ? 1 : 0,
-            maxWidth: size === "grow" ? "100%" : undefined,
-            flexShrink: size !== "none" ? 1 : 0,
-            flexBasis: size === "auto" ? "auto" : "0%",
-            width: size === "auto" ? "auto" : undefined,
+            gridColumn: `span ${columnSpan}`,
+            minWidth: 0,
         };
     }
+    switch (size) {
+        case "grow":
+            return {
+                gridColumn: "auto / span 20", // Start at current position, span up to 20
+                minWidth: 0,
+                width: "100%",
+                // These ensure it only takes available space
+                maxWidth: `calc((var(--available-width, 100%) - var(--gap, 0px)) * var(--columns-left, 1))`,
+            };
 
-    const spacingValue = typeof containerSpacing === 'string'
-        ? parseFloat(containerSpacing)
-        : Number(containerSpacing) || 0;
 
-    const spacingReduction = (spacingValue / 10);
+        case "shrink":
+            return {
+                gridColumn: "auto",
+                width: "min-content",
+            };
+
+        case "auto":
+            return {
+                gridColumn: "auto",
+                width: "min-content",
+            };
+        case "none":
+            return {
+                gridColumn: "auto",
+                minWidth: "fit-content",
+                maxWidth: "100%",
+            };
+        default:
+            return {
+                gridColumn: "auto",
+                width: "auto",
+                maxWidth: "100%",
+            };
 
 
-    const adjustedSize = Math.max(size - spacingReduction, 0);
-
-    const percentage = (adjustedSize / 20) * 100;
-
-    return {
-        flexGrow: 0,
-        flexShrink: 0,
-        flexBasis: `calc(${percentage}% - ${spacingValue}px)`,
-        maxWidth: `calc(${percentage}% - ${spacingValue}px)`,
-        width: `calc(${percentage}% - ${spacingValue}px)`,
-        minWidth: 0,
-    };
+    }
 };
+
 
 Grid.displayName = "Grid";
 

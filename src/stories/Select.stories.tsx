@@ -1,6 +1,6 @@
 // src/components/Select/Select.stories.tsx
 import type { Meta, StoryObj } from '@storybook/react';
-import { Select } from '../components/Inputs/Select.tsx';
+import { Select } from '../components';
 import { useState } from 'react';
 
 const meta = {

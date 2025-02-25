@@ -27,150 +27,197 @@ export const Containers: StoryObj = {
 export const Grids: StoryObj = {
     render: () => (
         <>
-            <h2 className="text-2xl font-bold mb-4">
-                CSS Grid Layout (Numeric Sizes & Offset)
-            </h2>
-            <Grid
-                container
-                // Simulate CSS grid behavior with a responsive column count.
-                direction="row"
-                spacing={10}
-                wrap="wrap"
-                className="border border-dashed border-gray-300 p-4"
-            >
-                {/* Full-width header section */}
-                <Grid item size={20} className="bg-blue-100 p-4">
-                    <h1 className="text-xl font-semibold">Complete Grid Showcase</h1>
-                    <p>
-                        This section demonstrates numeric sizing using a simulated CSS grid.
-                        Items span a number of slots out of 20.
-                    </p>
-                </Grid>
+            <Grid item className="page-container">
+                <section className="section">
+                    <h1 className="section-title">Grid Component Test</h1>
 
-                {/* Two Half-Row Items */}
-                <Grid item size={10} className="bg-red-200 p-4">
-                    <h2 className="font-medium">Half Row</h2>
-                    <p>This item takes up half the available width (10 out of 20 slots).</p>
-                </Grid>
-                <Grid item size={10} className="bg-green-200 p-4">
-                    <h2 className="font-medium">Matching Half</h2>
-                    <p>This item complements its partner to complete the full row.</p>
-                </Grid>
+                    {/* Basic Grid */}
+                    <h2 className="section-title">Basic Grid (2 columns)</h2>
+                    <Grid container spacing={20} className="demo-container">
+                        <Grid item size={10} >
+                            <Grid item className="bg-blue-light p-4">
+                                Item 1 (size 10)
+                            </Grid>
+                        </Grid>
+                        <Grid item size={10}>
+                            <Grid item className="bg-blue-light p-4">
+                                Item 2 (size 10)
+                            </Grid>
+                        </Grid>
+                    </Grid>
 
-                {/* Offset demonstration */}
-                <Grid item size={10} offset={[1, 3]} className="bg-yellow-200 p-4">
-                    <h2 className="font-medium">Offset Item</h2>
-                    <p>
-                        This item is offset by 1 (i.e. 10% right) on the x-axis and 3 (i.e.
-                        30% down) on the y-axis.
-                    </p>
-                </Grid>
+                    {/* Nested Grid */}
+                    <h2 className="section-title">Nested Grid</h2>
+                    <Grid container spacing={10} className="demo-container">
+                        <Grid item size={20}>
+                            <Grid container spacing={10} className="demo-container">
+                                <Grid item nested size={10}>
+                                    <Grid item className="bg-purple-light p-4">
+                                        Nested Item 1
+                                    </Grid>
+                                </Grid>
+                                <Grid item nested size={5}>
+                                    <Grid item className="bg-purple-light p-4">
+                                        Nested Item 2
+                                    </Grid>
+                                </Grid>
+                                <Grid item nested size={5}>
+                                    <Grid item className="bg-purple-light p-4">
+                                        Nested Item 3
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item size={20}>
+                            <Grid item className="bg-blue-light p-4">
+                                Regular Item
+                            </Grid>
+                        </Grid>
+                    </Grid>
 
-                {/* Nested Grid demonstration */}
-                    <Grid container spacing={20}>
-                    <Grid nested className="bg-purple-200">
-                        Nested Item 1
+                    {/* Different Sizes */}
+                    <h2 className="section-title">Different Sizes</h2>
+                    <Grid container spacing={2} className="demo-container">
+                        <Grid item size={5}>
+                            <Grid item className="bg-red-light p-4">
+                                Size 5
+                            </Grid>
+                        </Grid>
+                        <Grid item size={10}>
+                            <Grid item className="bg-green-light p-4">
+                                Size 10
+                            </Grid>
+                        </Grid>
+                        <Grid item size={5}>
+                            <Grid item className="bg-red-light p-4">
+                                Size 5
+                            </Grid>
+                        </Grid>
                     </Grid>
-                    <Grid nested className="bg-purple-300">
-                        Nested Item 2
+
+                    {/* Spacing Variations */}
+                    <h2 className="section-title">Spacing Variations</h2>
+                    <Grid item className="demo-container">
+                        <Grid container spacing={5}>
+                            <Grid item size={10}>
+                                <Grid item className="bg-red-light p-4">
+                                    Item 1 (spacing: 5px)
+                                </Grid>
+                            </Grid>
+                            <Grid item size={10}>
+                                <Grid item className="bg-blue-light p-4">
+                                    Item 2 (spacing: 5px)
+                                </Grid>
+                            </Grid>
+                        </Grid>
                     </Grid>
+
+                    <Grid item className="demo-container">
+                        <Grid container spacing={15}>
+                            <Grid item size={10}>
+                                <Grid item className="bg-green-light p-4">
+                                    Item 1 (spacing: 15px)
+                                </Grid>
+                            </Grid>
+                            <Grid item size={10}>
+                                <Grid item className="bg-purple-light p-4">
+                                    Item 2 (spacing: 15px)
+                                </Grid>
+                            </Grid>
+                        </Grid>
                     </Grid>
+
+                    <Grid item className="demo-container">
+                        <Grid container spacing={50}>
+                            <Grid item size={10}>
+                                <Grid item className="bg-green-light p-4">
+                                    Item 1 (spacing: 50px)
+                                </Grid>
+                            </Grid>
+                            <Grid item size={10}>
+                                <Grid item className="bg-purple-light p-4">
+                                    Item 2 (spacing: 50px)
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+
+                    <Grid item className="demo-container">
+                        <Grid container spacing={[5,0]}>
+                            <Grid item size={10}>
+                                <Grid item className="bg-red-light p-4">
+                                    Item 1 (spacing: [5,0]px)
+                                </Grid>
+                            </Grid>
+                            <Grid item size={10}>
+                                <Grid item className="bg-blue-light p-4">
+                                    Item 2 (spacing: [5,0]px)
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid item className="demo-container">
+                        <Grid container spacing={[50,5]}>
+                            <Grid item size={10}>
+                                <Grid item className="bg-red-light p-4">
+                                    Item 1 (spacing: [50,5]px)
+                                </Grid>
+                            </Grid>
+                            <Grid item size={10}>
+                                <Grid item className="bg-blue-light p-4">
+                                    Item 2 (spacing: [50,5]px)
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+                    {/* Offset Variations */}
+                    <h2 className="section-title">Offset Variations</h2>
+                    <Grid container spacing={50} className="demo-container">
+                        <Grid item size={5} offset={0}>
+                            <Grid item className="bg-yellow-1 p-4">
+                                Item 1 No Offset
+                            </Grid>
+                        </Grid>
+                        <Grid item size={5} offset={-2}>
+                            <Grid item className="bg-yellow-2 p-4">
+                                Item 2 Offset: -2
+                            </Grid>
+                        </Grid>
+                        <Grid item size={5} offset={[0,-10]}>
+                            <Grid item className="bg-yellow-3 p-4">
+                                Item 3 Offset: [0,-10]
+                            </Grid>
+                        </Grid>
+                        <Grid item size={5} offset={[-10,10]}>
+                            <Grid item className="bg-yellow-4 p-4">
+                                Item 4 Offset: [-10,10]
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+                    {/* Growing and Shrinking */}
+                    <h2 className="section-title">Growing and Shrinking</h2>
+                    <Grid container className="demo-container">
+                        <Grid item size="auto">
+                            <Grid item className="bg-purple-light p-4">
+                                Auto
+                            </Grid>
+                        </Grid>
+                        <Grid item size="grow">
+                            <Grid item className="bg-teal-light p-4">
+                                Grow
+                            </Grid>
+                        </Grid>
+                        <Grid item size="shrink">
+                            <Grid item className="bg-orange-light p-4">
+                                Shrink
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </section>
             </Grid>
-
-            <h2 className="text-2xl font-bold mt-8 mb-4">
-                Flex Layout (Auto & Grow)
-            </h2>
-            <Grid
-                container
-                // Omitting the columns prop triggers flex layout.
-                spacing="10px"
-                direction="row"
-                wrap="wrap"
-                className="border border-dotted border-gray-400 p-4"
-            >
-                {/* Auto Sizing Demonstration */}
-                <Grid item size="auto">
-                    <div className="bg-orange-200 p-4">
-                        <h2 className="font-medium">Auto Sizing</h2>
-                        <p>
-                            This item uses <code>size="auto"</code> and adjusts its width based on
-                            its content.
-                        </p>
-                    </div>
-                </Grid>
-
-                {/* Grow Functionality */}
-                <Grid item size="grow" className="bg-teal-200 p-4">
-                    <h2 className="font-medium">Grow</h2>
-                    <p>
-                        The <code>grow</code> property lets this item expand to fill any
-                        remaining space.
-                    </p>
-                </Grid>
-            </Grid>
-
-            <div>
-                <h2 className="text-2xl font-bold mb-4">Spacing Variations</h2>
-                <Grid
-                    container
-                    spacing="5px"
-                    className="border border-dashed border-gray-300 p-4 mb-4"
-                >
-                    <Grid item size={10} className="bg-red-200 p-4">
-                        Item 1 (spacing: 5px)
-                    </Grid>
-                    <Grid item size={10} className="bg-blue-200 p-4">
-                        Item 2 (spacing: 5px)
-                    </Grid>
-                </Grid>
-                <Grid
-                    container
-                    spacing="15px"
-                    className="border border-dashed border-gray-300 p-4"
-                >
-                    <Grid item size={10} className="bg-green-200 p-4">
-                        Item 1 (spacing: 15px)
-                    </Grid>
-                    <Grid item size={10} className="bg-purple-200 p-4">
-                        Item 2 (spacing: 15px)
-                    </Grid>
-                </Grid>
-                <Grid
-                    container
-                    spacing="50px"
-                    className="border border-dashed border-gray-300 p-4"
-                >
-                    <Grid item size={10} className="bg-green-200 p-4">
-                        Item 1 (spacing: 50px)
-                    </Grid>
-                    <Grid item size={10} className="bg-purple-200 p-4">
-                        Item 2 (spacing: 50px)
-                    </Grid>
-                </Grid>
-            </div>
-
-
-            <div>
-                <h2 className="text-2xl font-bold mb-4">Offset Variations</h2>
-                <Grid
-                    container
-                    spacing="10px"
-                    className="border border-dashed border-gray-300 p-4"
-                >
-                    <Grid item size={10} offset={0} className="bg-yellow-200 p-4">
-                        Item 1 No Offset
-                    </Grid>
-                    <Grid item size={10} offset={-2} className="bg-yellow-300 p-4">
-                        Item 2 Offset: -2 (20% Left & Up)
-                    </Grid>
-                    <Grid item size={10} offset={[0,-10]} className="bg-yellow-400 p-4">
-                        Item 3 Offset: [0,-10] (100% up)
-                    </Grid>
-                    <Grid item size={10} offset={[-10,10]} className="bg-yellow-500 p-4">
-                        Item 4 Offset: [-10,10] (100% Left & Down)
-                    </Grid>
-                </Grid>
-            </div>
         </>
     ),
 };
@@ -234,10 +281,10 @@ export const Sections: StoryObj = {
         <div
             className="bg-muted border border-gray-300 p-6 space-y-4"
         >
-            <Section background="default" spacing="lg">
+            <Section spacing="lg">
                 Default Section
             </Section>
-            <Section background="default" spacing="xl">
+            <Section spacing="xl">
                 Primary Section
             </Section>
         </div>
