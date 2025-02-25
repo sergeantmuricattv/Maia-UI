@@ -1,0 +1,103 @@
+{
+  "name": "maia-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/maia-ui.es.js",
+      "require": "./dist/maia-ui.umd.js"
+    },
+    "./styles.scss": {
+      "require": "./dist/styles.scss",
+      "default": "./dist/styles.scss"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && npm run build:css",
+    "preview": "vite preview",
+    "patch": "npm version patch",
+    "prebuildOnly": "npm run test && npm run clean",
+    "prepublish": "npm run build",
+    "build:css": "tailwindcss -m -i src/main.tailwind.css -o ./dist/styles.css",
+    "sb": "npm run storybook:css && storybook dev -p 6006",
+    "storybook": "npm run storybook:css && storybook dev -p 6006",
+    "build-storybook": "npm run storybook:css && storybook build",
+    "storybook:css": "tailwindcss -m -i src/main.tailwind.css -o src/index.css && npm run build:css",
+    "build:components": "npm run compile-components && npm run process-components",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx . --fix && stylelint \"**/*.{css,scss,sass}\" "
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@storybook/theming": "^8.5.8",
+    "@chromatic-com/storybook": "^3.2.4",
+    "@eslint/js": "^9.19.0",
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@storybook/addon-docs": "^8.5.8",
+    "@storybook/addon-essentials": "^8.5.8",
+    "@storybook/addon-interactions": "^8.5.8",
+    "@storybook/addon-onboarding": "^8.5.8",
+    "@storybook/addon-styling-webpack": "^1.0.1",
+    "@storybook/addon-themes": "^8.5.8",
+    "@storybook/blocks": "^8.5.8",
+    "@storybook/builder-vite": "^8.5.8",
+    "@storybook/react": "^8.5.8",
+    "@storybook/react-vite": "^8.5.8",
+    "@storybook/test": "^8.5.8",
+    "@tailwindcss/cli": "^4.0.8",
+    "@tailwindcss/postcss": "^4.0.8",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.5",
+    "@types/postcss-import": "^14.0.3",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.15",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.19.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.18",
+    "eslint-plugin-storybook": "^0.11.3",
+    "globals": "^15.14.0",
+    "init": "^0.1.2",
+    "postcss": "^8.5.3",
+    "postcss-import": "^16.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rollup-plugin-banner2": "^1.3.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.63.3",
+    "sass-embedded": "^1.85.0",
+    "storybook": "^8.5.8",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.17.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.22.0",
+    "vite": "^6.1.0",
+    "vite-plugin-dts": "^4.5.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1"
+  }
+}

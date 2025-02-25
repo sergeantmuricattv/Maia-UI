@@ -1,0 +1,67 @@
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.demo-container {
+    border: 1px dotted #9ca3af;
+
+}
+
+
+/* Grid Items Colors */
+.bg-blue-light {
+    background-color: #dbeafe;
+}
+
+.bg-red-light {
+    background-color: #fecaca;
+}
+
+.bg-green-light {
+    background-color: #bbf7d0;
+}
+
+.bg-yellow-light {
+    background-color: #fef08a;
+}
+
+.bg-purple-light {
+    background-color: #e9d5ff;
+}
+
+.bg-purple-dark {
+    background-color: #d8b4fe;
+}
+
+.bg-orange-light {
+    background-color: #fed7aa;
+}
+
+.bg-teal-light {
+    background-color: #99f6e4;
+}
+
+
+/* Border Styles */
+.border-dotted {
+    border: 1px dotted #9ca3af;
+}
+
+/* Yellow Variations */
+.bg-yellow-1 { background-color: #fef08a; }
+.bg-yellow-2 { background-color: #fde047; }
+.bg-yellow-3 { background-color: #facc15; }
+.bg-yellow-4 { background-color: #eab308; }
+
